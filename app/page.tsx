@@ -1,91 +1,40 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+    <div className='h-screen overflow-scroll px-4 py-20 bg-white dark:bg-black'>
+      <div className='flex flex-col'>
+        <div className='w-full h-auto'>
+          <div className='relative mb-6'>
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+              src='/images/profile.jpg'
+              alt='profile-image'
+              width={230}
+              height={230}
+              className='object-cover rounded-full h-60 w-60 border-4 border-gray-400 mx-auto'
             />
-          </a>
+          </div>
+          <div className='flex flex-col items-center text-center'>
+            <div className='flex flex-col text-3xl font-bold uppercase items-center'>
+              <span className='text-red-400'>I'm Xavier García.</span>
+              <span className='text-gray-600 dark:text-white mt-1'>Full-stack developer</span>
+            </div>
+            <p className='mt-3 mb-6 text-center text-gray-500 dark:text-white'>
+              I'm a Tunisian based web designer & front‑end developer focused on crafting clean &
+              user‑friendly experiences, I am passionate about building excellent software that
+              improves the lives of those around me.
+            </p>
+            <button className='relative flex justify-center items-center rounded-3xl py-4 pl-8 pr-16 border border-red-400'>
+              <span className='uppercase font-semibold text-gray-600 dark:text-white'>
+                More about me
+              </span>
+              <div className='absolute -right-2 top-1/2 -translate-y-1/2 w-14 h-14 bg-red-400 rounded-full flex justify-center items-center'>
+                <i className='fa-solid fa-arrow-right' />
+              </div>
+            </button>
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    </div>
+  );
 }
