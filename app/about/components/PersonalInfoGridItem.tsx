@@ -10,8 +10,8 @@ export default function PersonalInfoGridItem({ title, body, bodyColor, overflow 
     <div className='pb-5'>
       <span className='capitalize text-gray-200 opacity-80'>{title}:</span>
       <p
-        className={`text-white font-semibold ${bodyColor} ${
-          overflow && 'overflow-x-scroll sm:overflow-x-auto'
+        className={`lg:inline-block lg:ml-2 text-white font-semibold ${bodyColor} ${
+          overflow && 'overflow-x-scroll sm:overflow-x-clip'
         }`}
       >
         {body}
