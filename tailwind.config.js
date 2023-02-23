@@ -12,6 +12,12 @@ module.exports = {
       },
       borderWidth: {
         6: '6px'
+      },
+      colors: {
+        customDarkGray: {
+          300: '#444444',
+          400: '#252525'
+        }
       }
     }
   },

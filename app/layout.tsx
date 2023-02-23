@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-css-tags */
+import Navigation from '@/components/Navigation';
 import { ReactNode } from 'react';
 import './globals.css';
 
@@ -16,7 +17,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         <title>Xavier García - Full-Stack Developer</title>
       </head>
-      <body className='bg-white dark:bg-black'>{children}</body>
+      <body className='bg-white dark:bg-black mb-12 lg:mb-0'>
+        {children}
+        <Navigation />
+      </body>
     </html>
   );
 }
