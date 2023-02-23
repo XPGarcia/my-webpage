@@ -22,7 +22,7 @@ export default function StatisticsGridItem({ number, label }: Props) {
           {number}
           {number > 1 && <span className='absolute -right-5 -top-0.5 text-3xl'>+</span>}
         </h3>
-        <div className='relative text-white lg:font-semibold uppercase mt-1 sm:pl-11'>
+        <div className='relative text-white text-sm sm:text-base font-semibold uppercase mt-1 sm:pl-11'>
           <div
             className='hidden sm:block absolute w-7 top-3 left-0 bg-gray-400'
             style={{ height: '1px' }}

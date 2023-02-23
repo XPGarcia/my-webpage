@@ -3,16 +3,24 @@ import Skill from './Skill';
 export default function SkillsGrid() {
   const skills: { name: string; percentage: number }[] = [
     {
-      name: 'html',
-      percentage: 75
-    },
-    {
       name: 'javascript',
-      percentage: 80
+      percentage: 90
     },
     {
       name: 'typescript',
-      percentage: 70
+      percentage: 80
+    },
+    {
+      name: 'angular',
+      percentage: 80
+    },
+    {
+      name: 'react',
+      percentage: 60
+    },
+    {
+      name: 'html',
+      percentage: 75
     },
     {
       name: 'css',
