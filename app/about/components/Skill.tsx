@@ -21,7 +21,7 @@ export default function Skill({ skill, percentage }: Props) {
             <circle className={styles['base-timer__path-elapsed']} cx='50' cy='50' r='45' />
             <path
               id='base-timer-path-remaining'
-              stroke-dasharray={strokeDasharray}
+              strokeDasharray={strokeDasharray}
               className={`${styles['base-timer__path-remaining']} stroke-red-500`}
               d='
                 M 50, 50

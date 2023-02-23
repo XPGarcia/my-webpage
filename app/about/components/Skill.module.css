@@ -3,6 +3,8 @@
   position: relative;
   height: auto;
   width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
   padding: 24px;
 }
 
@@ -23,6 +25,7 @@
   
   /* Size should match the parent container */
   width: 100%;
+  max-width: 200px;
   height: auto;
   
   /* Keep the label aligned to the top */
