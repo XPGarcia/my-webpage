@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         <title>Xavier García - Full-Stack Developer</title>
       </head>
-      <body className='bg-white dark:bg-black mb-12 lg:mb-0'>
+      <body className='bg-black mb-16 lg:mb-0'>
         {children}
         <Navigation />
       </body>

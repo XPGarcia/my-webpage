@@ -19,6 +19,11 @@ export default function Navigation() {
       icon: 'fa-briefcase',
       link: '/portfolio',
       name: 'portfolio'
+    },
+    {
+      icon: 'fa-envelope',
+      link: '/contact',
+      name: 'contact'
     }
   ];
 

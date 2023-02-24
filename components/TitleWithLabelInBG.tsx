@@ -13,7 +13,10 @@ export default function TitleWithLabelInBG({ title, labelInBG }: Props) {
         {labelInBG}
       </h1>
       <h1 className='text-4xl lg:text-5xl font-black text-center'>
-        {wordsRight} <span className='text-red-500'>{wordsArray[wordsArray.length - 1]}</span>
+        {wordsRight}{' '}
+        <span className={`${wordsArray.length > 1 ? 'text-red-500' : 'text-white'}`}>
+          {wordsArray[wordsArray.length - 1]}
+        </span>
       </h1>
     </div>
   );
