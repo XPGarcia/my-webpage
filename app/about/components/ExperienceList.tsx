@@ -35,7 +35,7 @@ export default function ExperienceList() {
       companyName: 'Box Solutions',
       dateRange: ['06/2021', '10/2021'],
       description:
-        'Development of a web application to collect large amounts of information from farmers using Angular as the front-end framework to create an SPA and Firebase for the serverless authentication and database (Firestore).'
+        'Development of a web application to collect large amounts of information from farmers using Angular as the front-end framework to create a SPA and Firebase for the serverless authentication and database with Firestore.'
     }
   ];
 

@@ -47,9 +47,10 @@ export default function ProjectPageTemplate({ project, children }: Props) {
                 </Link>
               </div>
             )}
-            <ul className='text-white mt-3 list-disc ml-5'>
+            <p className='text-white'>{project.description}</p>
+            <ul className='text-white mt-4 list-disc ml-5'>
               {project.bulletPoints.map((line, index) => (
-                <li key={index} className='my-1'>
+                <li key={index} className='mb-4 last:mb-0'>
                   {line}
                 </li>
               ))}

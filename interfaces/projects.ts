@@ -6,6 +6,7 @@ export interface Project {
   projectName: string;
   path: string;
   externalUrl?: string;
+  description: string;
   bulletPoints: string[];
   skills: Skill[];
   client?: string;
