@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import styles from './Skill.module.css';
 
 interface Props {
@@ -5,9 +8,20 @@ interface Props {
   percentage: number;
 }
 
-export default function Skill({ skill, percentage }: Props) {
+export default function SkillGraph({ skill, percentage }: Props) {
   // 283 => Length of the arc = 2*pi*r (where r = 45)
-  const strokeDasharray = Math.ceil((283 * percentage) / 100).toString() + ' 283';
+  const FULL_DASH_ARRAY = 283;
+  const [strokeDasharray, setStrokeDasharray] = useState(`0 ${FULL_DASH_ARRAY}`);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const totalStrokeDasharray = `${Math.ceil(
+        (FULL_DASH_ARRAY * percentage) / 100
+      ).toString()} ${FULL_DASH_ARRAY.toString()}`;
+      setStrokeDasharray(totalStrokeDasharray);
+    }, 500);
+    return () => clearInterval(interval);
+  }, [strokeDasharray, percentage]);
 
   return (
     <div className='flex flex-col'>

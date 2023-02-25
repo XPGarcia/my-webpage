@@ -16,7 +16,7 @@ module.exports = {
       colors: {
         customDarkGray: {
           300: '#444444',
-          400: '#252525'
+          400: '#2b2a2a'
         }
       }
     }

@@ -1,3 +1,4 @@
+import { skills } from '@/global/skills';
 import Separator from '../../components/Separator';
 import TitleWithLabelInBG from '../../components/TitleWithLabelInBG';
 import ExperienceList from './components/ExperienceList';
@@ -21,7 +22,7 @@ export default function About() {
           <h3 className='text-xl md:text-2xl font-semibold text-white sm:text-center uppercase mb-10 px-4 sm:px-0'>
             my skills
           </h3>
-          <SkillsGrid />
+          <SkillsGrid skills={Object.values(skills)} />
         </div>
 
         <Separator />

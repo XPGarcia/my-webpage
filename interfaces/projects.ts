@@ -1,5 +1,12 @@
+import { Skill } from './skill';
+
 export interface Project {
-  imagePath: string;
+  banner: string;
+  campaign: string;
   projectName: string;
   path: string;
+  externalUrl?: string;
+  bulletPoints: string[];
+  skills: Skill[];
+  client?: string;
 }

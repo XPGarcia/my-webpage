@@ -13,7 +13,7 @@ export default function Portfolio() {
           {data.map((project) => (
             <PortfolioGridItem
               key={project.projectName}
-              imagePath={project.imagePath}
+              imagePath={project.banner}
               projectName={project.projectName}
               path={project.path}
             />
