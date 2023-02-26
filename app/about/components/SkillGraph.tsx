@@ -1,14 +1,14 @@
 'use client';
 
+import { Skill } from '@/domain/entities';
 import { useEffect, useState } from 'react';
 import styles from './Skill.module.css';
 
 interface Props {
-  skill: string;
-  percentage: number;
+  skill: Skill;
 }
 
-export default function SkillGraph({ skill, percentage }: Props) {
+export default function SkillGraph({ skill }: Props) {
   // 283 => Length of the arc = 2*pi*r (where r = 45)
   const FULL_DASH_ARRAY = 283;
   const [strokeDasharray, setStrokeDasharray] = useState(`0 ${FULL_DASH_ARRAY}`);
@@ -16,12 +16,12 @@ export default function SkillGraph({ skill, percentage }: Props) {
   useEffect(() => {
     const interval = setInterval(() => {
       const totalStrokeDasharray = `${Math.ceil(
-        (FULL_DASH_ARRAY * percentage) / 100
+        (FULL_DASH_ARRAY * skill.percentage) / 100
       ).toString()} ${FULL_DASH_ARRAY.toString()}`;
       setStrokeDasharray(totalStrokeDasharray);
     }, 500);
     return () => clearInterval(interval);
-  }, [strokeDasharray, percentage]);
+  }, [strokeDasharray, skill.percentage]);
 
   return (
     <div className='flex flex-col'>
@@ -47,10 +47,10 @@ export default function SkillGraph({ skill, percentage }: Props) {
           </g>
         </svg>
         <span id='base-timer-label' className={styles['base-timer__label'] + ' text-white'}>
-          {percentage.toString()}%
+          {skill.percentage.toString()}%
         </span>
       </div>
-      <h3 className='text-white font-semibold text-center mt-2 uppercase'>{skill}</h3>
+      <h3 className='text-white font-semibold text-center mt-2 uppercase'>{skill.name}</h3>
     </div>
   );
 }
