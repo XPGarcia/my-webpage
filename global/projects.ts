@@ -26,13 +26,16 @@ export const projects: Record<ProjectKey, Project> = {
     projectName: 'Livet Medical Center',
     path: '/portfolio/livet-medical-center',
     externalUrl: 'https://master.d2xu9q6nxzpr9j.amplifyapp.com/login',
-    description: '',
+    description:
+      'Livet Medical Center enables efficient scheduling and management of medical appointments at a healthcare facility. With a user-friendly interface, doctors can easily record and access essential patient data, including medical history, to provide personalized care. The system is designed to streamline the administrative process and help doctors focus on delivering high-quality medical services to their patients',
     bulletPoints: [
-      'Development with React as framework for the frontend',
-      'Hosting with AWS amplify and Authentication with AWS Cognito',
-      'Material UI as framework for styles and use of Redux for management of states'
+      'Design and develop of the web application using React with Redux and Material UI, delivering a good user experience while adhering to best practices and industry coding standards',
+      'Use of Redux for state management in a complex web application, providing efficient and centralized data flow to ensure optimal performance and maintainability',
+      "AWS Amplify for hosting to deploy and manage the application in the cloud. Implemented CI/CD, using the platform's automated build, test, and deployment processes. Configured continuous integration workflows with GitHub repository",
+      'Use of AWS Cognito to implement secure and reliable authentication and authorization mechanisms, ensuring robust security and compliance with industry standards'
     ],
-    skills: [skills.typescript, skills.react, skills['html&css'], skills.aws]
+    skills: [skills.typescript, skills.react, skills['html&css'], skills.aws],
+    client: 'Livet Medical Center'
   },
   findThePuppet: {
     banner: '/images/game-banner.jpg',
@@ -40,13 +43,13 @@ export const projects: Record<ProjectKey, Project> = {
     projectName: 'find the puppet',
     path: '/portfolio/find-the-puppet',
     externalUrl: 'https://melgabson.itch.io/find-the-puppet',
-    description: '',
+    description:
+      'Find the Puppet is an engaging multiplayer online card game that challenges five players to use their social skills and deduction abilities to determine the factions of their opponents with a focus on delivering a fun and immersive gaming experience. The project features a real-time communication architecture built on websockets that facilitates seamless interactions between clients and server, ensuring smooth gameplay and quick response times',
     bulletPoints: [
-      'Creation of websocket server using Node.js, Express and WS',
-      'Communication between clients and server using ws protocol and events managers',
-      'Broadcast and private messages implemented on websocket server',
-      'Server hosting on AWS EC2 and client hosting on itch.io',
-      'Client development on Godot'
+      'Built a highly performant WebSocket server using Node.js, Express, and ws, enabling real-time, bidirectional communication between clients and server It includes a robust room system that enables multiple games to be hosted simultaneously',
+      'Effectively bidirectional communication, enabling the delivery of private messages from the server to specific clients and the broadcasting of messages to all clients within the same game room',
+      'Deployed a Node.js WebSocket server on AWS EC2, using SSL/TLS encryption to enable HTTPS communication and ensure secure data transmission in the web',
+      'Developed the client side game using the Godot engine, using GDScripting and its powerful toolset. Hosted the game on itch.io, leveraging its built-in marketing and promotional features'
     ],
     skills: [skills.typescript, skills.nodejs, skills.godot, skills.aws]
   },
@@ -55,13 +58,21 @@ export const projects: Record<ProjectKey, Project> = {
     campaign: '/images/prometeo-shop-banner.jpg',
     projectName: 'Prometeo Shop',
     path: '/portfolio/prometeo-shop',
-    description: '',
+    description:
+      'The project is an e-commerce platform that uses a headless Content Management System (CMS) to manage products, enabling the e-commerce website to have a unique and customizable design. Additionally, the backend is a REST API based on microservices to provide communication between the different components. Using a microservices architecture, the project is built using Domain-Driven Design (DDD) and Hexagonal Architecture',
     bulletPoints: [
-      'Domain Driven Design and Hexagonal Architecture',
-      'Microservices with docker containers',
-      'Development of Rest APIs with Nestjs',
-      'Content Manager Systems in Angular 14'
+      'Developed multiple RESTful API utilizing Domain-Driven Design (DDD) and Hexagonal Architecture, resulting in a highly maintainable and scalable system that emphasizes business rules and separation of concerns',
+      'Use of microservices for better separation of concerns and the ability to easily maintain and update individual components of the system. Microservices with Docker containers to create a highly scalable and flexible system that can easily handle increased traffic and usage',
+      'Developed multiple RESTful APIs using the NestJS framework, leveraging its powerful features such as dependency injection, modules, and decorators to create highly maintainable and testable code. Implemented secure authentication using API keys. Use of a custom error handling library in all microservices, resulting in a standardized and consistent approach to error handling across the entire application',
+      '"Development of the e-commerce CMS using Angular for dynamic components and real-time updates, and Tailwind CSS for rapid styling of UI components with minimal CSS code'
     ],
-    skills: [skills.typescript, skills.angular, skills['html&css'], skills.nodejs, skills.sql]
+    skills: [
+      skills.typescript,
+      skills.angular,
+      skills['html&css'],
+      skills.nodejs,
+      skills.sql,
+      skills.docker
+    ]
   }
 };

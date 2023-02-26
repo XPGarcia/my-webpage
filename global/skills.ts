@@ -53,7 +53,7 @@ export const skills: Record<SkillKey, Skill> = {
   },
   godot: {
     name: 'godot',
-    percentage: 30
+    percentage: 40
   },
   aws: {
     name: 'aws',
