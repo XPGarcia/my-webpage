@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-css-tags */
+/* eslint-disable @next/next/no-sync-scripts */
 import Navigation from '@/components/Navigation';
 import { ReactNode } from 'react';
 import './globals.css';
@@ -11,10 +11,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head>
-        <link href='/fontawesome/css/fontawesome.css' rel='stylesheet' />
-        <link href='/fontawesome/css/brands.css' rel='stylesheet' />
-        <link href='/fontawesome/css/solid.css' rel='stylesheet' />
-
+        <script src='https://kit.fontawesome.com/553e257edc.js' crossOrigin='anonymous' />
         <title>Xavier García - Full-Stack Developer</title>
       </head>
       <body className='bg-black mb-16 lg:mb-0'>
