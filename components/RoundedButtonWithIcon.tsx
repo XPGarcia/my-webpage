@@ -3,6 +3,7 @@ interface Props {
   icon: string;
   isAnchor?: boolean;
   link?: string;
+  download?: boolean;
   onButtonClicked?: () => void;
 }
 
@@ -11,6 +12,7 @@ export default function RoundedButtonWithIcon({
   icon,
   isAnchor,
   link,
+  download,
   onButtonClicked
 }: Props) {
   const buttonStyles = { borderRadius: '56px', paddingRight: '70px' };
@@ -28,7 +30,7 @@ export default function RoundedButtonWithIcon({
   );
 
   const anchorComponent = (
-    <a href={link} className={buttonClasses} style={buttonStyles}>
+    <a href={link} className={buttonClasses} style={buttonStyles} download={download}>
       {content}
     </a>
   );

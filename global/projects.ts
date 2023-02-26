@@ -1,4 +1,4 @@
-import { Project } from '@/interfaces/projects';
+import { Project } from '@/domain/entities/projects';
 import { skills } from './skills';
 
 type ProjectKey = 'proalco' | 'livet' | 'findThePuppet' | 'prometeoShop';

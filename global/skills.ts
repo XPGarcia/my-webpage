@@ -1,4 +1,4 @@
-import { Skill } from '@/interfaces/skill';
+import { Skill } from '@/domain/entities/skill';
 
 type SkillKey =
   | 'javascript'

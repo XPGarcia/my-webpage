@@ -2,7 +2,7 @@ import SkillsGrid from '@/app/about/components/SkillsGrid';
 import RoundedButtonWithIcon from '@/components/RoundedButtonWithIcon';
 import Separator from '@/components/Separator';
 import TitleWithLabelInBG from '@/components/TitleWithLabelInBG';
-import { Project } from '@/interfaces/projects';
+import { Project } from '@/domain/entities/projects';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';

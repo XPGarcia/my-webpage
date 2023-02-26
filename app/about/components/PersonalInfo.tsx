@@ -26,7 +26,13 @@ export default function PersonalInfo({ classes }: Props) {
         <PersonalInfoGridItem title='languages' body='Spanish, English, German' />
       </div>
       <div className='w-full flex justify-center lg:justify-start'>
-        <RoundedButtonWithIcon body='Download CV' icon='fa-download' />
+        <RoundedButtonWithIcon
+          body='Download CV'
+          icon='fa-download'
+          isAnchor
+          download
+          link='/files/xavier_resume_EN.pdf'
+        />
       </div>
     </div>
   );
