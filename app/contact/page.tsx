@@ -1,6 +1,6 @@
 import TitleWithLabelInBG from '@/components/TitleWithLabelInBG';
-import Link from 'next/link';
 import ContactLineOption from './components/ContactLineOption';
+import SocialMediaIcons from './components/SocialMediaIcons';
 
 export default function Contact() {
   return (
@@ -27,28 +27,7 @@ export default function Contact() {
               icon='fa-envelope-circle-check'
             />
             <ContactLineOption title='call me' body='+593959795664' icon='fa-square-phone' />
-            <div className='flex pt-2'>
-              <div className='mr-3'>
-                <Link
-                  href='https://www.linkedin.com/in/xavier-garcia-bano-244b60245/'
-                  className='flex justify-center items-center w-11 h-11 bg-customDarkGray-400 rounded-full'
-                  rel='noreferrer'
-                  target='_blank'
-                >
-                  <i className='fa-brands fa-linkedin' />
-                </Link>
-              </div>
-              <div className='mr-3'>
-                <Link
-                  href='https://github.com/XPGarcia'
-                  className='flex justify-center items-center w-11 h-11 bg-customDarkGray-400 rounded-full'
-                  rel='noreferrer'
-                  target='_blank'
-                >
-                  <i className='fa-brands fa-github' />
-                </Link>
-              </div>
-            </div>
+            <SocialMediaIcons classes='pt-2 mb-12' />
           </div>
         </div>
       </div>

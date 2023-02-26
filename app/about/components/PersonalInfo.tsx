@@ -22,7 +22,12 @@ export default function PersonalInfo({ classes }: Props) {
         <PersonalInfoGridItem title='address' body='Ecuador' />
         <PersonalInfoGridItem title='phone' body='+593959795664' />
         <PersonalInfoGridItem title='email' body='xavier.garcia@prometeo.dev' overflow />
-        <PersonalInfoGridItem title='github' body='XPGarcia' />
+        <PersonalInfoGridItem
+          title='github'
+          body='XPGarcia'
+          link='https://github.com/XPGarcia'
+          isAnchor
+        />
         <PersonalInfoGridItem title='languages' body='Spanish, English, German' />
       </div>
       <div className='w-full flex justify-center lg:justify-start'>
