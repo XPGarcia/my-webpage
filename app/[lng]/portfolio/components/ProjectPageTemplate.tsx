@@ -1,10 +1,10 @@
-import SkillsGrid from '@/app/about/components/SkillsGrid';
 import RoundedButtonWithIcon from '@/components/RoundedButtonWithIcon';
 import Separator from '@/components/Separator';
 import TitleWithLabelInBG from '@/components/TitleWithLabelInBG';
 import { Project } from '@/domain/entities/projects';
 import Image from 'next/image';
 import { ReactNode } from 'react';
+import SkillsGrid from '../../about/components/SkillsGrid';
 import ProjectDescription from './ProjectDescription';
 
 interface Props {

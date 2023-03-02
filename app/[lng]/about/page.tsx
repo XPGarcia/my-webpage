@@ -1,6 +1,6 @@
 import { skills } from '@/global/skills';
-import Separator from '../../components/Separator';
-import TitleWithLabelInBG from '../../components/TitleWithLabelInBG';
+import Separator from '../../../components/Separator';
+import TitleWithLabelInBG from '../../../components/TitleWithLabelInBG';
 import ExperienceList from './components/ExperienceList';
 import PersonalInfo from './components/PersonalInfo';
 import SkillsGrid from './components/SkillsGrid';

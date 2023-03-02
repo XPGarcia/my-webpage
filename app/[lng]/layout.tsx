@@ -1,11 +1,24 @@
 /* eslint-disable @next/next/no-sync-scripts */
+import { dir } from 'i18next';
+
 import Navigation from '@/components/Navigation';
 import { ReactNode } from 'react';
 import './globals.css';
+import { languages } from '../i18n/settings';
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }));
+}
+
+export default function RootLayout({
+  children,
+  params: { lng }
+}: {
+  children: ReactNode;
+  params: { lng: string };
+}) {
   return (
-    <html lang='en'>
+    <html lang={lng} dir={dir(lng)}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
