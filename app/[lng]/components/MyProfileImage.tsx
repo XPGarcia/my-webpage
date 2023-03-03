@@ -1,14 +1,10 @@
 import Image from 'next/image';
 
-interface Props {
-  lng: string;
-}
-
-export default function MyProfileImage({ lng }: Props) {
+export default function MyProfileImage() {
   return (
     <div className='lg:hidden relative mb-6'>
       <Image
-        src={`/${lng}/images/profile.jpg`}
+        src='/images/profile.jpg'
         alt='profile-image'
         width={230}
         height={230}

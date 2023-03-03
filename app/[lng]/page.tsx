@@ -14,14 +14,15 @@ export default async function Home({ params: { lng } }: { params: { lng: string 
       <div className='flex flex-col lg:flex-row lg:w-full'>
         <BGColor />
         <div className='flex flex-col lg:flex-row w-full h-auto'>
-          <MyProfileImage lng={lng} />
+          <MyProfileImage />
           <div className='hidden lg:block w-1/3' />
-          <BGMyProfileImage lng={lng} />
+          <BGMyProfileImage />
           <div className='w-full lg:w-2/3'>
             <MyDescription
               name={name}
               job={translation('job')}
               description={translation('my_description')}
+              buttonLabel={translation('more_about')}
             />
           </div>
         </div>
