@@ -3,23 +3,25 @@ import Link from 'next/link';
 
 interface Props {
   project: Project;
+  translation: (label: string) => string;
 }
 
-export default function ProjectDescription({ project }: Props) {
+export default function ProjectDescription({ project, translation }: Props) {
   return (
     <div className='flex flex-col pl-2'>
       {project.client && (
         <div className='text-white mb-3'>
           <i className='fa-regular fa-user' />
           <p className='inline pl-3'>
-            Client : <span className='font-semibold capitalize'>{project.client}</span>
+            {translation('client')} :{' '}
+            <span className='font-semibold capitalize'>{project.client}</span>
           </p>
         </div>
       )}
       {project.externalUrl && (
         <div className='text-white mb-3 overflow-x-scroll sm:overflow-x-auto'>
           <i className='fa-solid fa-arrow-up-right-from-square' />
-          <p className='inline pl-3'>Preview : </p>
+          <p className='inline pl-3'>{translation('preview')} : </p>
           <Link href={project.externalUrl} rel='noreferrer' target='_blank'>
             <span className='font-semibold text-red-500 underline'>{project.externalUrl}</span>
           </Link>

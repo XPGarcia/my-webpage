@@ -10,9 +10,10 @@ import ProjectDescription from './ProjectDescription';
 interface Props {
   project: Project;
   children?: ReactNode;
+  translation: (label: string) => string;
 }
 
-export default function ProjectPageTemplate({ project, children }: Props) {
+export default function ProjectPageTemplate({ project, children, translation }: Props) {
   return (
     <div className='flex flex-col'>
       <TitleWithLabelInBG title={project.projectName} labelInBG='Project' />
@@ -27,14 +28,14 @@ export default function ProjectPageTemplate({ project, children }: Props) {
               className='object-cover w-full h-full rounded-lg'
             />
           </div>
-          <ProjectDescription project={project} />
+          <ProjectDescription project={project} translation={translation} />
         </div>
 
         <Separator />
 
         <div className='flex flex-col pb-20'>
           <h3 className='text-xl md:text-2xl font-semibold text-white sm:text-center uppercase mb-10 px-4 sm:px-0'>
-            Skills
+            {translation('skills')}
           </h3>
           <SkillsGrid skills={project.skills} />
         </div>
@@ -43,7 +44,7 @@ export default function ProjectPageTemplate({ project, children }: Props) {
 
         <div className='flex justify-center items-center pb-20'>
           <RoundedButtonWithIcon
-            body='Other projects'
+            body={translation('other_projects')}
             icon='fa-arrow-right'
             isAnchor
             link='/portfolio'

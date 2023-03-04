@@ -1,8 +1,15 @@
-import { projects } from '@/global/projects';
+import { useTranslation } from '@/app/i18n';
+import { ProjectService } from '@/domain/services/project.service';
 import ProjectPageTemplate from '../components/ProjectPageTemplate';
 
-export default function Livet() {
-  const livet = projects.livet;
+interface Props {
+  params: { lng: string };
+}
 
-  return <ProjectPageTemplate project={livet} />;
+export default async function Livet({ params: { lng } }: Props) {
+  const { t: translation } = await useTranslation(lng, ['portfolio']);
+
+  const livet = ProjectService.getOne('livet', lng);
+
+  return <ProjectPageTemplate project={livet} translation={translation} />;
 }

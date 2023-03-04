@@ -1,8 +1,15 @@
-import { projects } from '@/global/projects';
+import { useTranslation } from '@/app/i18n';
+import { ProjectService } from '@/domain/services/project.service';
 import ProjectPageTemplate from '../components/ProjectPageTemplate';
 
-export default function Proalco() {
-  const proalco = projects.proalco;
+interface Props {
+  params: { lng: string };
+}
 
-  return <ProjectPageTemplate project={proalco} />;
+export default async function Proalco({ params: { lng } }: Props) {
+  const { t: translation } = await useTranslation(lng, ['portfolio']);
+
+  const proalco = ProjectService.getOne('proalco', lng);
+
+  return <ProjectPageTemplate project={proalco} translation={translation} />;
 }
