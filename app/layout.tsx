@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Navigation from '@/components/Navigation';
+import Navigation from '@/app/components/Navigation';
 import { ReactNode } from 'react';
 import './globals.css';
 

@@ -1,5 +1,5 @@
 import MyProfileImage from '@/app/components/MyProfileImage';
-import RoundedButtonWithIcon from '@/components/RoundedButtonWithIcon';
+import RoundedButtonWithIcon from '@/app/components/RoundedButtonWithIcon';
 import PersonalInfoGridItem from './PersonalInfoGridItem';
 
 interface Props {

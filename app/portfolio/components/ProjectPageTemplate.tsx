@@ -1,7 +1,7 @@
 import SkillsGrid from '@/app/about/components/SkillsGrid';
-import RoundedButtonWithIcon from '@/components/RoundedButtonWithIcon';
-import Separator from '@/components/Separator';
-import TitleWithLabelInBG from '@/components/TitleWithLabelInBG';
+import RoundedButtonWithIcon from '@/app/components/RoundedButtonWithIcon';
+import Separator from '@/app/components/Separator';
+import TitleWithLabelInBG from '@/app/components/TitleWithLabelInBG';
 import { Project } from '@/domain/entities/projects';
 import Image from 'next/image';
 import { ReactNode } from 'react';
@@ -25,6 +25,7 @@ export default function ProjectPageTemplate({ project, children }: Props) {
               width={1280}
               height={720}
               className='object-cover w-full h-full rounded-lg'
+              priority
             />
           </div>
           <ProjectDescription project={project} />

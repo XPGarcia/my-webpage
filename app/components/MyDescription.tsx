@@ -1,4 +1,4 @@
-import RoundedButtonWithIcon from '@/components/RoundedButtonWithIcon';
+import RoundedButtonWithIcon from '@/app/components/RoundedButtonWithIcon';
 
 export default function MyDescription() {
   return (

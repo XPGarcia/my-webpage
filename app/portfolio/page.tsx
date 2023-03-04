@@ -1,5 +1,5 @@
 import { projects } from '@/global/projects';
-import TitleWithLabelInBG from '../../components/TitleWithLabelInBG';
+import TitleWithLabelInBG from '@/app/components/TitleWithLabelInBG';
 import PortfolioGridItem from './components/PortfolioGridItem';
 
 export default function Portfolio() {

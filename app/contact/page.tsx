@@ -1,4 +1,4 @@
-import TitleWithLabelInBG from '@/components/TitleWithLabelInBG';
+import TitleWithLabelInBG from '@/app/components/TitleWithLabelInBG';
 import ContactLineOption from './components/ContactLineOption';
 import SocialMediaIcons from './components/SocialMediaIcons';
 
