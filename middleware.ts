@@ -6,7 +6,7 @@ acceptLanguage.languages(languages);
 
 export const config = {
   // matcher: '/:lng*'
-  matcher: ['/((?!api|_next/static|_next/image|assets|favicon.ico|sw.js).*)']
+  matcher: ['/((?!api|_next/static|_next/image|assets|images|files|favicon.ico|sw.js).*)']
 };
 
 const cookieName = 'i18next';
@@ -22,12 +22,18 @@ export function middleware(req: NextRequest) {
     !languages.some((loc) => req.nextUrl.pathname.startsWith(`/${loc}`)) &&
     !req.nextUrl.pathname.startsWith('/_next')
   ) {
+    console.log('-----FIRST------');
+    console.log(req.nextUrl.pathname);
     return NextResponse.redirect(new URL(`/${lng}${req.nextUrl.pathname}`, req.url));
   }
 
   if (req.headers.has('referer')) {
+    console.log('-----SECOND------');
+    console.log(req.headers.get('referer'));
     const refererUrl = new URL(req.headers.get('referer') ?? '');
+    console.log(refererUrl.pathname);
     const lngInReferer = languages.find((l) => refererUrl.pathname.startsWith(`/${l}`));
+    console.log(lngInReferer);
     const response = NextResponse.next();
     if (lngInReferer) response.cookies.set(cookieName, lngInReferer);
     return response;

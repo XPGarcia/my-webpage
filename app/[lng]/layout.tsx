@@ -5,6 +5,7 @@ import Navigation from '@/components/Navigation';
 import { ReactNode } from 'react';
 import './globals.css';
 import { languages } from '../i18n/settings';
+import LanguageSwitcher from './components/LanguageSwitcher';
 
 export async function generateStaticParams() {
   return languages.map((lng) => ({ lng }));
@@ -27,7 +28,8 @@ export default function RootLayout({
         <script src='https://kit.fontawesome.com/553e257edc.js' crossOrigin='anonymous' />
         <title>Xavier García - Full-Stack Developer</title>
       </head>
-      <body className='bg-black mb-16 lg:mb-0'>
+      <body className='relative bg-black mb-16 lg:mb-0'>
+        <LanguageSwitcher currentLng={lng} />
         {children}
         <Navigation />
       </body>

@@ -26,6 +26,7 @@ export default function ProjectPageTemplate({ project, children, translation }: 
               width={1280}
               height={720}
               className='object-cover w-full h-full rounded-lg'
+              priority
             />
           </div>
           <ProjectDescription project={project} translation={translation} />

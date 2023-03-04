@@ -9,6 +9,8 @@ interface Props {
 }
 
 export default function PersonalInfo({ classes, lng, translation }: Props) {
+  const CVFile = `xavier_resume_${lng.toUpperCase()}.pdf`;
+
   return (
     <div className={`${classes} flex flex-col px-4 text-white`}>
       <h3 className='text-xl lg:text-2xl font-semibold pb-6 uppercase'>
@@ -51,7 +53,7 @@ export default function PersonalInfo({ classes, lng, translation }: Props) {
           icon='fa-download'
           isAnchor
           download
-          link={`/${lng}/files/xavier_resume_EN.pdf`}
+          link={`/files/${CVFile}`}
         />
       </div>
     </div>
