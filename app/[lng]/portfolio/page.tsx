@@ -1,6 +1,6 @@
 import { useTranslation } from '@/app/i18n';
 import { ProjectService } from '@/domain/services/project.service';
-import TitleWithLabelInBG from '../../../components/TitleWithLabelInBG';
+import TitleWithLabelInBG from '@/app/[lng]/components/TitleWithLabelInBG';
 import PortfolioGridItem from './components/PortfolioGridItem';
 
 interface Props {

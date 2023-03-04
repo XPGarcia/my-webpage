@@ -1,4 +1,4 @@
-import RoundedButtonWithIcon from '@/components/RoundedButtonWithIcon';
+import RoundedButtonWithIcon from '@/app/[lng]/components/RoundedButtonWithIcon';
 import MyProfileImage from '../../components/MyProfileImage';
 import PersonalInfoGridItem from './PersonalInfoGridItem';
 

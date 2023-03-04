@@ -1,7 +1,7 @@
 import { useTranslation } from '@/app/i18n';
 import { skills } from '@/global/skills';
-import Separator from '../../../components/Separator';
-import TitleWithLabelInBG from '../../../components/TitleWithLabelInBG';
+import Separator from '@/app/[lng]/components/Separator';
+import TitleWithLabelInBG from '@/app/[lng]/components/TitleWithLabelInBG';
 import ExperienceList from './components/ExperienceList';
 import PersonalInfo from './components/PersonalInfo';
 import SkillsGrid from './components/SkillsGrid';

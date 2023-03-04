@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import { dir } from 'i18next';
 
-import Navigation from '@/components/Navigation';
+import Navigation from '@/app/[lng]/components/Navigation';
 import { ReactNode } from 'react';
 import './globals.css';
 import { languages } from '../i18n/settings';

@@ -1,6 +1,6 @@
-import RoundedButtonWithIcon from '@/components/RoundedButtonWithIcon';
-import Separator from '@/components/Separator';
-import TitleWithLabelInBG from '@/components/TitleWithLabelInBG';
+import RoundedButtonWithIcon from '@/app/[lng]/components/RoundedButtonWithIcon';
+import Separator from '@/app/[lng]/components/Separator';
+import TitleWithLabelInBG from '@/app/[lng]/components/TitleWithLabelInBG';
 import { Project } from '@/domain/entities/projects';
 import Image from 'next/image';
 import { ReactNode } from 'react';

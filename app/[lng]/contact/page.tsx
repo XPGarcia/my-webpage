@@ -1,5 +1,5 @@
 import { useTranslation } from '@/app/i18n';
-import TitleWithLabelInBG from '@/components/TitleWithLabelInBG';
+import TitleWithLabelInBG from '@/app/[lng]/components/TitleWithLabelInBG';
 import ContactLineOption from './components/ContactLineOption';
 import SocialMediaIcons from './components/SocialMediaIcons';
 
