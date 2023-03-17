@@ -34,7 +34,7 @@ export const projects: Record<ProjectKey, Project> = {
       "AWS Amplify for hosting to deploy and manage the application in the cloud. Implemented CI/CD, using the platform's automated build, test, and deployment processes. Configured continuous integration workflows with GitHub repository",
       'Use of AWS Cognito to implement secure and reliable authentication and authorization mechanisms, ensuring robust security and compliance with industry standards'
     ],
-    skills: [skills.typescript, skills.react, skills['html&css'], skills.aws],
+    skills: [skills.javascript, skills.react, skills['html&css'], skills.aws],
     client: 'Livet Medical Center'
   },
   findThePuppet: {

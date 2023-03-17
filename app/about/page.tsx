@@ -5,6 +5,7 @@ import ExperienceList from './components/ExperienceList';
 import PersonalInfo from './components/PersonalInfo';
 import SkillsGrid from './components/SkillsGrid';
 import Statistics from './components/Statistics';
+import CertificationsList from './components/CertificationsList';
 
 export default function About() {
   return (
@@ -32,6 +33,15 @@ export default function About() {
             experience & education
           </h3>
           <ExperienceList />
+        </div>
+
+        <Separator />
+
+        <div className='flex flex-col'>
+          <h3 className='text-xl md:text-2xl font-semibold text-white sm:text-center uppercase mb-10 px-4 sm:px-0'>
+            certifications
+          </h3>
+          <CertificationsList />
         </div>
       </div>
     </div>
