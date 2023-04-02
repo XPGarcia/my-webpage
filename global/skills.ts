@@ -33,7 +33,7 @@ export const skills: Record<SkillKey, Skill> = {
   },
   'html&css': {
     name: 'html & css',
-    percentage: 75
+    percentage: 80
   },
   nodejs: {
     name: 'nodejs',
@@ -47,16 +47,16 @@ export const skills: Record<SkillKey, Skill> = {
     name: 'sql',
     percentage: 80
   },
+  aws: {
+    name: 'aws',
+    percentage: 50
+  },
   firebase: {
     name: 'firebase',
     percentage: 50
   },
   godot: {
     name: 'godot',
-    percentage: 40
-  },
-  aws: {
-    name: 'aws',
     percentage: 40
   },
   docker: {

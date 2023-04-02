@@ -25,7 +25,7 @@ export const projects: Record<ProjectKey, Project> = {
     campaign: '/images/livet-banner.jpg',
     projectName: 'Livet Medical Center',
     path: '/portfolio/livet-medical-center',
-    externalUrl: 'https://master.d2xu9q6nxzpr9j.amplifyapp.com/login',
+    externalUrl: 'https://master.d2k1849fzd5ls4.amplifyapp.com',
     description:
       'Livet Medical Center enables efficient scheduling and management of medical appointments at a healthcare facility. With a user-friendly interface, doctors can easily record and access essential patient data, including medical history, to provide personalized care. The system is designed to streamline the administrative process and help doctors focus on delivering high-quality medical services to their patients',
     bulletPoints: [
