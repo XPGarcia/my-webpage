@@ -1,10 +1,12 @@
-import { certifications } from '@/global/certifications';
 import CertificationListItem from './CertificationListItem';
+import { Certification } from '@/domain/entities';
 
-export default function CertificationsList() {
-  const data = certifications;
+interface Props {
+  certificationList: Certification[];
+}
 
-  const numberOfBlockList = Math.ceil(data.length / 3);
+export default function CertificationsList({ certificationList }: Props) {
+  const numberOfBlockList = Math.ceil(certificationList.length / 3);
 
   const blocksList = [];
 
@@ -12,9 +14,11 @@ export default function CertificationsList() {
     blocksList.push(
       <div className='w-full lg:w-1/2'>
         <ul>
-          {data.slice(i * 3, i * 3 + 3 < data.length ? i + 3 : data.length).map((certification) => (
-            <CertificationListItem key={certification.name} certification={certification} />
-          ))}
+          {certificationList
+            .slice(i * 3, i * 3 + 3 < certificationList.length ? i + 3 : certificationList.length)
+            .map((certification, index) => (
+              <CertificationListItem key={index} certification={certification} />
+            ))}
         </ul>
       </div>
     );

@@ -3,6 +3,15 @@ import Navigation from '@/app/components/Navigation';
 import { ReactNode } from 'react';
 import './globals.css';
 
+export const metadata = {
+  title: 'Xavier García - Full-Stack Developer',
+  description:
+    "I'm a Ecuadorian based full-stack web developer with a passion for creating exceptional software and innovative experiences, I am committed to delivering high-quality web applications that meet the needs of my clients and users.",
+  icons: {
+    icon: '/favicon.ico'
+  }
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang='en'>
@@ -12,7 +21,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       */}
       <head>
         <script src='https://kit.fontawesome.com/553e257edc.js' crossOrigin='anonymous' />
-        <title>Xavier García - Full-Stack Developer</title>
       </head>
       <body className='bg-black mb-16 lg:mb-0'>
         {children}

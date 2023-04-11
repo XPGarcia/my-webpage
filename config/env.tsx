@@ -1,6 +1,5 @@
 export const env = {
-  awsRegion: process.env.MY_AWS_REGION ?? '',
-  awsS3Bucket: process.env.MY_AWS_S3BUCKET ?? '',
-  awsAccessKey: process.env.MY_AWS_ACCESS_KEY ?? '',
-  awsSecretAccessKey: process.env.MY_AWS_SECRET_ACCESS_KEY ?? ''
+  userId: process.env.USER_ID ?? '',
+  jwtToken: process.env.JWT_TOKEN ?? '',
+  apiUrl: process.env.API_URL ?? ''
 };

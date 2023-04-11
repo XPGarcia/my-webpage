@@ -1,13 +1,15 @@
-import { experienceList } from '@/global/experienceList';
+import { Experience } from '@/domain/entities';
 import ExperienceListItem from './ExperienceListItem';
 
-export default function ExperienceGrid() {
-  const data = experienceList;
+interface Props {
+  experienceList: Experience[];
+}
 
+export default function ExperienceGrid({ experienceList }: Props) {
   return (
     <div className='grid grid-cols-1 lg:grid-cols-2 px-4'>
-      {data.map((experience) => (
-        <ExperienceListItem key={experience.companyName} experience={experience} />
+      {experienceList.map((experience, index) => (
+        <ExperienceListItem key={index} experience={experience} />
       ))}
     </div>
   );
