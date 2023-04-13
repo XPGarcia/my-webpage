@@ -1,4 +1,5 @@
 import { Language } from './language';
+import { SocialMedia } from './socialMedia';
 
 export interface User {
   id: string;
@@ -12,5 +13,6 @@ export interface User {
   description: string;
   available: boolean;
   nationality: string;
+  socialMedia?: SocialMedia;
   languages?: Language[];
 }

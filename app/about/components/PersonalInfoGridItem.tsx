@@ -32,9 +32,11 @@ export default function PersonalInfoGridItem({
       {isAnchor && link && (
         <Link
           href={link}
-          className={`lg:inline-block lg:ml-2 font-semibold underline ${
+          className={`block lg:inline-block lg:ml-2 font-semibold underline ${
             bodyColor || 'text-white'
           } ${overflow && 'overflow-x-scroll sm:overflow-x-clip'}`}
+          rel='noreferrer'
+          target='_blank'
         >
           {body}
         </Link>

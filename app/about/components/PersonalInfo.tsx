@@ -14,6 +14,8 @@ export default function PersonalInfo({ user, classes }: Props) {
     ?.map((language) => language.name)
     .reduce((accumulator, currentValue) => accumulator + `, ${currentValue}`);
 
+  const githubUser = user.socialMedia?.github?.split('/').at(-1);
+
   return (
     <div className={`${classes} flex flex-col px-4 text-white`}>
       <h3 className='text-xl lg:text-2xl font-semibold pb-6 uppercase'>Personal Info</h3>
@@ -33,12 +35,15 @@ export default function PersonalInfo({ user, classes }: Props) {
         {user.address && <PersonalInfoGridItem title='address' body={user.address} />}
         {user.phone && <PersonalInfoGridItem title='phone' body={user.phone} />}
         <PersonalInfoGridItem title='email' body={user.email} overflow />
-        <PersonalInfoGridItem
-          title='github'
-          body='XPGarcia'
-          link='https://github.com/XPGarcia'
-          isAnchor
-        />
+        {user.socialMedia?.github && (
+          <PersonalInfoGridItem
+            title='github'
+            body={githubUser!}
+            link={user.socialMedia?.github}
+            isAnchor
+            overflow
+          />
+        )}
         {languagesString && <PersonalInfoGridItem title='languages' body={languagesString} />}
       </div>
       <div className='w-full flex justify-center lg:justify-start'>

@@ -1,20 +1,21 @@
+import { SocialMedia } from '@/domain/entities';
 import SocialMediaButton from './SocialMediaButton';
 
 interface Props {
+  socialMedia: SocialMedia;
   classes: string;
 }
 
-export default function SocialMediaIcons({ classes }: Props) {
+export default function SocialMediaIcons({ socialMedia, classes }: Props) {
   return (
     <div className={`flex ${classes}`}>
       <div className='mr-3'>
-        <SocialMediaButton
-          link='https://www.linkedin.com/in/xavier-garcia-bano-244b60245/'
-          icon='fa-linkedin'
-        />
+        {socialMedia.linkedin && (
+          <SocialMediaButton link={socialMedia.linkedin} icon='fa-linkedin' />
+        )}
       </div>
       <div className='mr-3'>
-        <SocialMediaButton link='https://github.com/XPGarcia' icon='fa-github' />
+        {socialMedia.github && <SocialMediaButton link={socialMedia.github} icon='fa-github' />}
       </div>
     </div>
   );

@@ -4,12 +4,14 @@ import { User } from '@/domain/entities';
 import { ApiResponse, UserResponse } from '@/infra/axios/entities';
 
 export async function useUser({
-  withLanguages = false
+  withLanguages = false,
+  withSocialMedia = false
 }: {
   withLanguages?: boolean;
+  withSocialMedia?: boolean;
 }): Promise<User> {
   const { data, status } = await axiosClient.get<ApiResponse<UserResponse>>(`/user/${env.userId}`, {
-    params: { withLanguages }
+    params: { withLanguages, withSocialMedia }
   });
   if (status === 401 || status === 403) {
     console.log(status);

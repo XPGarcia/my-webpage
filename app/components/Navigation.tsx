@@ -30,7 +30,9 @@ export default function Navigation() {
   const pathname = usePathname();
 
   const bgIconColor = (route: string) => {
-    return pathname === route ? 'bg-red-500' : 'bg-customDarkGray-300';
+    const rootPathname = pathname?.split('/')[1];
+    const rootRoute = route.split('/')[1];
+    return rootPathname === rootRoute ? 'bg-red-500' : 'bg-customDarkGray-300';
   };
 
   return (

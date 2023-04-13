@@ -54,3 +54,12 @@ export interface CertificationResponse {
   institution: string;
   description: string;
 }
+
+export interface SocialMediaResponse {
+  id: string;
+  github?: string;
+  linkedin?: string;
+  twitter?: string;
+  facebook?: string;
+  instagram?: string;
+}

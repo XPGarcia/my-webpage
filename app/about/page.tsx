@@ -14,7 +14,7 @@ import {
 } from '../hooks';
 
 export default async function About() {
-  const userPromise = useUser({ withLanguages: true });
+  const userPromise = useUser({ withLanguages: true, withSocialMedia: true });
   const skillsPromise = useSkills();
   const experienceListPromise = useExperienceList();
   const educationListPromise = useEducationList();

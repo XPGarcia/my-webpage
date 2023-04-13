@@ -1,8 +1,11 @@
 import TitleWithLabelInBG from '@/app/components/TitleWithLabelInBG';
 import ContactLineOption from './components/ContactLineOption';
 import SocialMediaIcons from './components/SocialMediaIcons';
+import { useUser } from '../hooks';
 
-export default function Contact() {
+export default async function Contact() {
+  const user = await useUser({ withLanguages: false, withSocialMedia: true });
+
   return (
     <div className='flex flex-col'>
       <TitleWithLabelInBG title='get in touch' labelInBG='contact' />
@@ -21,13 +24,13 @@ export default function Contact() {
               feel free to shoot me a message. I'm excited to hear from you soon and see how we can
               work together towards achieving your goals!
             </p>
-            <ContactLineOption
-              title='mail me'
-              body='xavier.garcia@prometeo.dev'
-              icon='fa-envelope-circle-check'
-            />
-            <ContactLineOption title='call me' body='+593959795664' icon='fa-square-phone' />
-            <SocialMediaIcons classes='pt-2 mb-12' />
+            <ContactLineOption title='mail me' body={user.email} icon='fa-envelope-circle-check' />
+            {user.phone && (
+              <ContactLineOption title='call me' body={user.phone} icon='fa-square-phone' />
+            )}
+            {user.socialMedia && (
+              <SocialMediaIcons socialMedia={user.socialMedia} classes='pt-2 mb-12' />
+            )}
           </div>
         </div>
       </div>
