@@ -15,12 +15,12 @@ interface Props {
 export default function ProjectPageTemplate({ project, children }: Props) {
   return (
     <div className='flex flex-col'>
-      <TitleWithLabelInBG title={project.projectName} labelInBG='Project' />
+      <TitleWithLabelInBG title={project.title} labelInBG='Project' />
       <div className='flex flex-col container mx-auto px-4'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
           <div className='w-full'>
             <Image
-              src={project.campaign}
+              src={project.imageUrl}
               alt='campaign'
               width={1280}
               height={720}

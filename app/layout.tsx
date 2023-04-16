@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import Navigation from '@/app/components/Navigation';
-import { ReactNode } from 'react';
+import { ReactNode, Suspense } from 'react';
 import './globals.css';
+import Loading from './loading';
 
 export const metadata = {
   title: 'Xavier García - Full-Stack Developer',
@@ -22,9 +23,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <script src='https://kit.fontawesome.com/553e257edc.js' crossOrigin='anonymous' />
       </head>
-      <body className='bg-black mb-16 lg:mb-0'>
-        {children}
-        <Navigation />
+      <body className='bg-black'>
+        <Suspense fallback={<Loading />}>
+          <div className='mb-16 lg:mb-0'>{children}</div>
+          <Navigation />
+        </Suspense>
       </body>
     </html>
   );

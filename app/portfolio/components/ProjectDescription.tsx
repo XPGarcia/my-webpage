@@ -8,20 +8,20 @@ interface Props {
 export default function ProjectDescription({ project }: Props) {
   return (
     <div className='flex flex-col pl-2'>
-      {project.client && (
+      {project.clientName && (
         <div className='text-white mb-3'>
           <i className='fa-regular fa-user' />
           <p className='inline pl-3'>
-            Client : <span className='font-semibold capitalize'>{project.client}</span>
+            Client : <span className='font-semibold capitalize'>{project.clientName}</span>
           </p>
         </div>
       )}
-      {project.externalUrl && (
+      {project.previewUrl && (
         <div className='text-white mb-3 overflow-x-scroll sm:overflow-x-auto'>
           <i className='fa-solid fa-arrow-up-right-from-square' />
           <p className='inline pl-3'>Preview : </p>
-          <Link href={project.externalUrl} rel='noreferrer' target='_blank'>
-            <span className='font-semibold text-red-500 underline'>{project.externalUrl}</span>
+          <Link href={project.previewUrl} rel='noreferrer' target='_blank'>
+            <span className='font-semibold text-red-500 underline'>{project.previewUrl}</span>
           </Link>
         </div>
       )}
