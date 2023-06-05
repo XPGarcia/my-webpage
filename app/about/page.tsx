@@ -6,8 +6,11 @@ import SkillsGrid from './components/SkillsGrid';
 import Statistics from './components/Statistics';
 import CertificationsList from './components/CertificationsList';
 import ExperienceGrid from './components/ExperienceGrid';
+import MixpanelStatisticHandler from '@/infra/Mixpanel/mixpanel-statistic-handler';
 
 export default function About() {
+  MixpanelStatisticHandler.getInstance().onAboutPageOpened();
+
   return (
     <div className='flex flex-col'>
       <TitleWithLabelInBG title='about me' labelInBG='resume' />

@@ -1,5 +1,5 @@
 import { env } from '@/config/env';
-import FileHandler from '@/domain/contracts/FileHandler';
+import FileHandler from '@/domain/contracts/file-handler';
 import { S3Client, GetObjectCommand } from '@aws-sdk/client-s3';
 import { Readable } from 'stream';
 import { createWriteStream } from 'fs';
