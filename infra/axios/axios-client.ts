@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { env } from '@/config/env';
+import { notFound } from 'next/navigation';
 
 const axiosClient = axios.create({
   baseURL: `${env.apiUrl}`
@@ -16,8 +17,8 @@ axiosClient.interceptors.response.use(
   },
   (error) => {
     const { response } = error;
-    if (response.status === 401 || response.status === 403) {
-      console.log(response);
+    if (response.status === 401 || response.status === 403 || response.status === 404) {
+      notFound();
     }
 
     throw error;

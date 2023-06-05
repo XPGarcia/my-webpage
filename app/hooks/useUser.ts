@@ -1,7 +1,7 @@
 import axiosClient from '@/infra/axios/axios-client';
-import { env } from '@/config/env';
 import { User } from '@/domain/entities';
 import { ApiResponse, UserResponse } from '@/infra/axios/entities';
+import { UserAdapter } from '@/infra/axios/adapters';
 
 export async function useUser({
   withLanguages = false,
@@ -10,18 +10,9 @@ export async function useUser({
   withLanguages?: boolean;
   withSocialMedia?: boolean;
 }): Promise<User> {
-  const { data, status } = await axiosClient.get<ApiResponse<UserResponse>>(`/user/${env.userId}`, {
+  const { data, status } = await axiosClient.get<ApiResponse<UserResponse>>('/user', {
     params: { withLanguages, withSocialMedia }
   });
-  if (status === 401 || status === 403) {
-    console.log(status);
-  }
 
-  return mapToDomain(data.data);
-}
-
-function mapToDomain(userResponse: UserResponse): User {
-  const user: User = { ...userResponse, birthDate: new Date(userResponse.birthDate) };
-
-  return user;
+  return UserAdapter.toDomain(data.data);
 }

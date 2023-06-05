@@ -8,6 +8,15 @@ export interface LanguageResponse {
   level: string;
 }
 
+export interface SocialMediaResponse {
+  id: string;
+  github?: string;
+  linkedin?: string;
+  twitter?: string;
+  facebook?: string;
+  instagram?: string;
+}
+
 export interface UserResponse {
   id: string;
   firstName: string;
@@ -20,6 +29,7 @@ export interface UserResponse {
   description: string;
   available: boolean;
   nationality: string;
+  socialMedia?: SocialMediaResponse;
   languages?: LanguageResponse[];
 }
 
@@ -53,15 +63,6 @@ export interface CertificationResponse {
   title: string;
   institution: string;
   description: string;
-}
-
-export interface SocialMediaResponse {
-  id: string;
-  github?: string;
-  linkedin?: string;
-  twitter?: string;
-  facebook?: string;
-  instagram?: string;
 }
 
 export interface ProjectResponse {
