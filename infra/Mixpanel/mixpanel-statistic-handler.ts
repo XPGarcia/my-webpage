@@ -1,4 +1,4 @@
-import mixpanel from '@/config/mixPanel';
+import mixpanel from '@/config/mixpanel';
 import StatisticHandler from '@/domain/contracts/statistic-handler';
 import { Project } from '@/domain/entities';
 
