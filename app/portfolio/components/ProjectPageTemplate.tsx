@@ -6,7 +6,6 @@ import { Project } from '@/domain/entities/projects';
 import Image from 'next/image';
 import { ReactNode } from 'react';
 import ProjectDescription from './ProjectDescription';
-import MixpanelStatisticHandler from '@/infra/Mixpanel/mixpanel-statistic-handler';
 
 interface Props {
   project: Project;
@@ -14,8 +13,6 @@ interface Props {
 }
 
 export default function ProjectPageTemplate({ project, children }: Props) {
-  MixpanelStatisticHandler.getInstance().onProjectOpened(project);
-
   return (
     <div className='flex flex-col'>
       <TitleWithLabelInBG title={project.projectName} labelInBG='Project' />
