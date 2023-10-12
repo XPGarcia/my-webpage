@@ -7,12 +7,16 @@ type SkillKey =
   | 'react'
   | 'html&css'
   | 'nodejs'
+  | 'nextjs'
+  | 'laravel'
+  | 'vue'
   | 'php'
   | 'sql'
   | 'firebase'
   | 'aws'
   | 'godot'
-  | 'docker';
+  | 'docker'
+  | 'tailwindcss';
 
 export const skills: Record<SkillKey, Skill> = {
   javascript: {
@@ -23,9 +27,13 @@ export const skills: Record<SkillKey, Skill> = {
     name: 'typescript',
     percentage: 80
   },
+  vue: {
+    name: 'vue',
+    percentage: 70
+  },
   angular: {
     name: 'angular',
-    percentage: 80
+    percentage: 60
   },
   react: {
     name: 'react',
@@ -35,13 +43,25 @@ export const skills: Record<SkillKey, Skill> = {
     name: 'html & css',
     percentage: 80
   },
+  tailwindcss: {
+    name: 'Tailwind CSS',
+    percentage: 70
+  },
+  laravel: {
+    name: 'laravel',
+    percentage: 70
+  },
+  php: {
+    name: 'php',
+    percentage: 70
+  },
   nodejs: {
     name: 'nodejs',
     percentage: 60
   },
-  php: {
-    name: 'php',
-    percentage: 50
+  nextjs: {
+    name: 'next.js',
+    percentage: 60
   },
   sql: {
     name: 'sql',
@@ -49,7 +69,7 @@ export const skills: Record<SkillKey, Skill> = {
   },
   aws: {
     name: 'aws',
-    percentage: 50
+    percentage: 70
   },
   firebase: {
     name: 'firebase',
@@ -61,6 +81,6 @@ export const skills: Record<SkillKey, Skill> = {
   },
   docker: {
     name: 'docker',
-    percentage: 40
+    percentage: 50
   }
 };
