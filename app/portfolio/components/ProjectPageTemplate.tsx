@@ -6,10 +6,21 @@ import { Project } from '@/domain/entities/projects';
 import Image from 'next/image';
 import { ReactNode } from 'react';
 import ProjectDescription from './ProjectDescription';
+import type { Metadata, ResolvingMetadata } from 'next';
 
 interface Props {
   project: Project;
   children?: ReactNode;
+}
+
+export function generateMetadata({ project }: Props, parent: ResolvingMetadata): Metadata {
+  return {
+    title: `Xavier García - ${project.projectName}`,
+    description: `Project ${project.projectName} made as a Full-Stack developer`,
+    openGraph: {
+      images: [project.banner]
+    }
+  };
 }
 
 export default function ProjectPageTemplate({ project, children }: Props) {

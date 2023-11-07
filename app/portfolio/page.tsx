@@ -1,6 +1,12 @@
 import { projects } from '@/global/projects';
 import TitleWithLabelInBG from '@/app/components/TitleWithLabelInBG';
 import PortfolioGridItem from './components/PortfolioGridItem';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Xavier García - Portfolio',
+  description: 'Projects made as a Full-Stack developer'
+};
 
 export default function Portfolio() {
   const data = Object.values(projects);

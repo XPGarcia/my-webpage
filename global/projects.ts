@@ -1,7 +1,7 @@
 import { Project } from '@/domain/entities/projects';
 import { skills } from './skills';
 
-type ProjectKey = 'proalco' | 'livet' | 'findThePuppet' | 'prometeoShop' | 'ronSanMiguel';
+export type ProjectKey = 'proalco' | 'livet' | 'findThePuppet' | 'prometeoShop' | 'ronSanMiguel';
 
 export const projects: Record<ProjectKey, Project> = {
   ronSanMiguel: {

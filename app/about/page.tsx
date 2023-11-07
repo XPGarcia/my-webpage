@@ -1,4 +1,3 @@
-import { skills } from '@/global/skills';
 import Separator from '@/app/components/Separator';
 import TitleWithLabelInBG from '@/app/components/TitleWithLabelInBG';
 import PersonalInfo from './components/PersonalInfo';
@@ -6,6 +5,13 @@ import SkillsGrid from './components/SkillsGrid';
 import Statistics from './components/Statistics';
 import CertificationsList from './components/CertificationsList';
 import ExperienceGrid from './components/ExperienceGrid';
+import { skills } from '@/global/skills';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Xavier García - About me',
+  description: `Full-Stack developer with technical skills in: ${Object.keys(skills).join(', ')}.`
+};
 
 export default function About() {
   return (

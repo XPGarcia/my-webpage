@@ -1,7 +1,14 @@
+import type { Metadata } from 'next';
 import BGColor from './components/BGColor';
 import BGMyProfileImage from './components/BGMyProfileImage';
 import MyDescription from './components/MyDescription';
 import MyProfileImage from './components/MyProfileImage';
+
+export const metadata: Metadata = {
+  title: 'Xavier García - Full Stack web developer',
+  description:
+    'I am Xavier García, Full-stack web developer with a lot of knowledge in front-end and back-end.'
+};
 
 export default function Home() {
   return (

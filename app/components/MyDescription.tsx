@@ -8,8 +8,10 @@ export default function MyDescription() {
           className='hidden xl:block absolute h-1 w-10 left-3 rounded bg-red-500'
           style={{ top: '24px' }}
         />
-        <span className='text-red-500'>I'm Xavier García.</span>
-        <span className='text-white mt-1'>Full-stack developer</span>
+        <h1 className='text-red-500 text-left'>
+          I'm Xavier García.
+          <span className='text-white mt-1 block'>Full-stack developer</span>
+        </h1>
       </div>
       <p className='mt-3 lg:mt-4 mb-6 lg:mb-7 lg:text-lg leading-7 lg:leading-9 text-center lg:text-left text-white'>
         I'm a Ecuadorian based full-stack web developer with a passion for creating exceptional
