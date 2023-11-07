@@ -5,11 +5,12 @@ export type ProjectKey = 'proalco' | 'livet' | 'findThePuppet' | 'prometeoShop' 
 
 export const projects: Record<ProjectKey, Project> = {
   ronSanMiguel: {
+    slug: 'ron-san-miguel',
     banner: '/images/ron-san-miguel-banner.jpg',
     campaign: '/images/ron-san-miguel-banner.jpg',
     projectName: 'Ron San Miguel',
     path: '/portfolio/ron-san-miguel',
-    externalUrl: 'https://ronsanmiguel.com/es',
+    externalUrl: 'https://ronsanmiguel.com/en',
     description:
       "Ron San Miguel is a local rum company known for its exceptional products. In order to showcase its premium rum selections, values, and company culture, Ron San Miguel has developed a website as a marketing tool. The project includes a fully functional and responsive website that faithfully represents the original Figma design and upholds the company's standards",
     bulletPoints: [
@@ -21,9 +22,10 @@ export const projects: Record<ProjectKey, Project> = {
     client: 'Ron San Miguel'
   },
   proalco: {
+    slug: 'proalco',
     banner: '/images/proalco-banner.jpg',
     campaign: '/images/proalco-banner.jpg',
-    projectName: 'proalco',
+    projectName: 'Proalco',
     path: '/portfolio/proalco',
     externalUrl: 'https://www.proalco.com/inicio',
     description:
@@ -37,11 +39,12 @@ export const projects: Record<ProjectKey, Project> = {
     client: 'Proalco'
   },
   livet: {
+    slug: 'livet-medical-center',
     banner: '/images/livet-banner.jpg',
     campaign: '/images/livet-banner.jpg',
     projectName: 'Livet Medical Center',
     path: '/portfolio/livet-medical-center',
-    externalUrl: 'https://master.d2k1849fzd5ls4.amplifyapp.com',
+    externalUrl: 'https://medcenter.xaviergarcia.dev',
     description:
       'Livet Medical Center enables efficient scheduling and management of medical appointments at a healthcare facility. With a user-friendly interface, doctors can easily record and access essential patient data, including medical history, to provide personalized care. The system is designed to streamline the administrative process and help doctors focus on delivering high-quality medical services to their patients',
     bulletPoints: [
@@ -54,9 +57,10 @@ export const projects: Record<ProjectKey, Project> = {
     client: 'Livet Medical Center'
   },
   findThePuppet: {
+    slug: 'find-the-puppet',
     banner: '/images/game-banner.jpg',
     campaign: '/images/game-banner.jpg',
-    projectName: 'find the puppet',
+    projectName: 'Find the Puppet',
     path: '/portfolio/find-the-puppet',
     externalUrl: 'https://melgabson.itch.io/find-the-puppet',
     description:
@@ -64,12 +68,13 @@ export const projects: Record<ProjectKey, Project> = {
     bulletPoints: [
       'Built a highly performant WebSocket server using Node.js, Express, and ws, enabling real-time, bidirectional communication between clients and server It includes a robust room system that enables multiple games to be hosted simultaneously',
       'Effectively bidirectional communication, enabling the delivery of private messages from the server to specific clients and the broadcasting of messages to all clients within the same game room',
-      'Deployed a Node.js WebSocket server on AWS EC2, using SSL/TLS encryption to enable HTTPS communication and ensure secure data transmission in the web',
+      'Developed a serverless WebSocket server with Node.js using the SST framework on AWS. The server leverages AWS Lambda for serverless compute, Amazon S3 for data storage, and API Gateway to establish WebSocket connections. SSL/TLS encryption is applied to ensure secure data transmission, enabling HTTPS communication for increased security',
       'Developed the client side game using the Godot engine, using GDScripting and its powerful toolset. Hosted the game on itch.io, leveraging its built-in marketing and promotional features'
     ],
     skills: [skills.typescript, skills.nodejs, skills.godot, skills.aws]
   },
   prometeoShop: {
+    slug: 'prometeo-shop',
     banner: '/images/prometeo-shop-banner.jpg',
     campaign: '/images/prometeo-shop-banner.jpg',
     projectName: 'Prometeo Shop',

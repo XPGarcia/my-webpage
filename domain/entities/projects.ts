@@ -1,6 +1,7 @@
 import { Skill } from './skill';
 
 export interface Project {
+  slug: string;
   banner: string;
   campaign: string;
   projectName: string;

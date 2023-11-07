@@ -1,6 +1,12 @@
 import TitleWithLabelInBG from '@/app/components/TitleWithLabelInBG';
 import ContactLineOption from './components/ContactLineOption';
 import SocialMediaIcons from './components/SocialMediaIcons';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Xavier García - Contact',
+  description: 'Has a Job that needs a Full-Stack developer? Feel free to contact me.'
+};
 
 export default function Contact() {
   return (

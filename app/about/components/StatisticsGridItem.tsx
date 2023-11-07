@@ -1,9 +1,10 @@
 interface Props {
   number: number;
   label: string;
+  plus?: boolean;
 }
 
-export default function StatisticsGridItem({ number, label }: Props) {
+export default function StatisticsGridItem({ number, label, plus = false }: Props) {
   const splitLabel = (label: string): string[] => {
     const resultWords = [];
     const wordsArray = label.split(' ');
@@ -20,7 +21,7 @@ export default function StatisticsGridItem({ number, label }: Props) {
       <div className='h-full border border-gray-800 p-5 rounded'>
         <h3 className='relative w-fit text-red-500 text-4xl lg:text-5xl font-bold'>
           {number}
-          {number > 1 && <span className='absolute -right-5 -top-0.5 text-3xl'>+</span>}
+          {plus && <span className='absolute -right-5 -top-0.5 text-3xl'>+</span>}
         </h3>
         <div className='relative text-white text-sm sm:text-base font-semibold uppercase mt-1 sm:pl-11'>
           <div
