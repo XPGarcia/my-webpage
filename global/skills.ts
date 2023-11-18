@@ -16,7 +16,8 @@ type SkillKey =
   | 'aws'
   | 'godot'
   | 'docker'
-  | 'tailwindcss';
+  | 'tailwindcss'
+  | 'nuxt';
 
 export const skills: Record<SkillKey, Skill> = {
   javascript: {
@@ -62,6 +63,10 @@ export const skills: Record<SkillKey, Skill> = {
   nextjs: {
     name: 'next.js',
     percentage: 60
+  },
+  nuxt: {
+    name: 'nuxt',
+    percentage: 70
   },
   sql: {
     name: 'sql',

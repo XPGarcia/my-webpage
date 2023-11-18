@@ -2,9 +2,13 @@
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "cSpell.words": [
+    "carros",
     "fontawesome",
     "laravel",
     "livet",
+    "Meilisearch",
+    "nuxt",
+    "Pinia",
     "proalco",
     "prometeo",
     "tailwindcss"
