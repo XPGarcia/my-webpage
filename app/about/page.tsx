@@ -36,7 +36,7 @@ export default function About() {
 
         <div className='flex flex-col'>
           <h3 className='text-xl md:text-2xl font-semibold text-white sm:text-center uppercase mb-10 px-4 sm:px-0'>
-            experience & education
+            experience
           </h3>
           <ExperienceGrid />
         </div>
@@ -45,7 +45,7 @@ export default function About() {
 
         <div className='flex flex-col'>
           <h3 className='text-xl md:text-2xl font-semibold text-white sm:text-center uppercase mb-10 px-4 sm:px-0'>
-            certifications
+            education & certifications
           </h3>
           <CertificationsList />
         </div>

@@ -38,7 +38,7 @@ export const skills: Record<SkillKey, Skill> = {
   },
   react: {
     name: 'react',
-    percentage: 60
+    percentage: 80
   },
   'html&css': {
     name: 'html & css',
@@ -58,11 +58,11 @@ export const skills: Record<SkillKey, Skill> = {
   },
   nodejs: {
     name: 'nodejs',
-    percentage: 60
+    percentage: 80
   },
   nextjs: {
     name: 'next.js',
-    percentage: 60
+    percentage: 80
   },
   nuxt: {
     name: 'nuxt',
