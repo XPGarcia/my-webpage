@@ -1,26 +1,10 @@
-/**
- *
- * @param dateRange expected type: ['MM/YYYY', 'MM/YYYY' || 'PRESENT']
- * @returns the number of months worked
- */
-export const calculateMonthsWorked = (dateRange: string[]): number => {
-  const [startDate, endDate] = dateRange;
+export const calculateMonthsWorked = (start: Date, end: Date): number => {
+  const startMonth = start.getMonth() + 1;
+  const startYear = start.getFullYear();
+  const endMonth = end.getMonth() + 1;
+  const endYear = end.getFullYear();
 
-  const [startMonth, startYear] = startDate.split('/');
-
-  let endMonth: number;
-  let endYear: number;
-  if (endDate.toLowerCase() === 'present') {
-    const today = new Date();
-    endMonth = today.getMonth() + 1;
-    endYear = today.getFullYear();
-  } else {
-    const parts = endDate.split('/');
-    endMonth = parseInt(parts[0]);
-    endYear = parseInt(parts[1]);
-  }
-
-  const monthsWorked = (endYear - parseInt(startYear)) * 12 + endMonth - parseInt(startMonth) + 1;
+  const monthsWorked = (endYear - startYear) * 12 + endMonth - startMonth;
 
   return monthsWorked;
 };

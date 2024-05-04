@@ -27,8 +27,8 @@ export const ProjectDescription = ({ project }: Props) => {
       )}
       <p className='text-white'>{project.description}</p>
       <ul className='text-white mt-4 list-disc ml-5'>
-        {project.bulletPoints.map((line, index) => (
-          <li key={index} className='mb-4 last:mb-0'>
+        {project.bulletPoints.map((line) => (
+          <li key={line} className='mb-4 last:mb-0'>
             {line}
           </li>
         ))}

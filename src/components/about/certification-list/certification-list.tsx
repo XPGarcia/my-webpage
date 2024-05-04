@@ -6,6 +6,12 @@ interface Props {
 }
 
 export const CertificationsList = ({ certifications }: Props) => {
+  const sortedCertifications = certifications.sort((a, b) => {
+    const aDate = a.date ?? new Date();
+    const bDate = b.date ?? new Date();
+    return bDate.getTime() - aDate.getTime();
+  });
+
   const numberOfBlockList = Math.ceil(certifications.length / 3);
 
   const blocksList = [];
@@ -14,7 +20,7 @@ export const CertificationsList = ({ certifications }: Props) => {
     blocksList.push(
       <div className='w-full lg:w-1/2'>
         <ul>
-          {certifications
+          {sortedCertifications
             .slice(i * 3, i * 3 + 3 < certifications.length ? i + 3 : certifications.length)
             .map((certification) => (
               <CertificationListItem key={certification.name} certification={certification} />

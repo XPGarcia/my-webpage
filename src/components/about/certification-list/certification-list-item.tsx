@@ -1,4 +1,5 @@
 import { Certification } from '@/src/types';
+import { formatToMonthYear } from '@/src/utils';
 
 interface Props {
   certification: Certification;
@@ -18,7 +19,7 @@ export const CertificationListItem = ({ certification }: Props) => {
         className='inline-block text-xs font-semibold mb-2 text-white bg-gray-800 opacity-80 uppercase'
         style={{ borderRadius: '20px', padding: '1px 10px' }}
       >
-        {certification.date}
+        {formatToMonthYear(certification.date)}
       </span>
       <h6 className='uppercase text-white text-lg font-semibold my-3'>
         {certification.name}

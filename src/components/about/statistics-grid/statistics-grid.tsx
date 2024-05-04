@@ -8,7 +8,7 @@ interface Props {
 
 export const StatisticsGrid = ({ classes }: Props) => {
   const monthsWorked = experienceList
-    .map((exp) => calculateMonthsWorked(exp.dateRange))
+    .map((exp) => calculateMonthsWorked(exp.dateStart, exp.dateEnd ?? new Date()))
     .reduce((acc, curr) => acc + curr, 0);
   const yearsOfExperience = fromMonthsToYears(monthsWorked);
   const experienceWithPlus = monthsWorked % 12 > 0;

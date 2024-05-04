@@ -1,4 +1,4 @@
-import { Project } from '@/domain/entities';
+import { Project } from '@/src/types';
 import { skills } from '../skills';
 
 export const findThePuppet: Project = {

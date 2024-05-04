@@ -1,14 +1,15 @@
 export interface Certification {
   name: string;
   company: string;
-  date: string;
+  date: Date;
   description: string;
 }
 
 export interface Experience {
   role: string;
   companyName: string;
-  dateRange: string[];
+  dateStart: Date;
+  dateEnd?: Date;
   description: string;
 }
 

@@ -1,5 +1,6 @@
 import { SSTConfig } from 'sst';
 import { NextjsSite } from 'sst/constructs';
+import { createExperienceTable } from './sst-config';
 
 export default {
   config(_input) {
@@ -17,7 +18,8 @@ export default {
                 domainName: process.env.DOMAIN_URL,
                 domainAlias: `www.${process.env.DOMAIN_URL}`
               }
-            : undefined
+            : undefined,
+        bind: [createExperienceTable(stack)]
       });
 
       stack.addOutputs({

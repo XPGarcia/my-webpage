@@ -14,9 +14,9 @@ export const SidebarNavigation = () => {
   return (
     <div className='fixed bottom-0 lg:bottom-auto left-0 lg:left-auto lg:right-8 lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-fit lg:h-fit p-2 bg-customDarkGray-400 lg:bg-transparent z-10'>
       <ul className='flex lg:flex-col justify-evenly lg:justify-start items-center lg:items-start'>
-        {routes.map((route, index) => (
+        {routes.map((route) => (
           <li
-            key={index}
+            key={route.name}
             className={`group w-12 h-12 text-white rounded-full lg:my-5 cursor-pointer hover:bg-red-500 ${bgIconColor(
               route.link
             )}`}
