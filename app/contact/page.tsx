@@ -1,6 +1,5 @@
-import TitleWithLabelInBG from '@/app/components/TitleWithLabelInBG';
-import ContactLineOption from './components/ContactLineOption';
-import SocialMediaIcons from './components/SocialMediaIcons';
+import { TitleWithLabelInBG, ContactLineOption, SocialMediaIcons } from '@/src/components';
+
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

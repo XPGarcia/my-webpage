@@ -1,8 +1,5 @@
+import { BGMyProfileImage, MyDescription, MyProfileImage } from '@/src/components';
 import type { Metadata } from 'next';
-import BGColor from './components/BGColor';
-import BGMyProfileImage from './components/BGMyProfileImage';
-import MyDescription from './components/MyDescription';
-import MyProfileImage from './components/MyProfileImage';
 
 export const metadata: Metadata = {
   title: 'Xavier García - Full Stack web developer',
@@ -14,7 +11,17 @@ export default function Home() {
   return (
     <div className='flex flex-col h-screen px-4 justify-center items-center'>
       <div className='flex flex-col lg:flex-row lg:w-full'>
-        <BGColor />
+        <div
+          className='hidden lg:block bg-red-500'
+          style={{
+            position: 'fixed',
+            height: '200%',
+            width: '100%',
+            transform: 'rotate(-15deg)',
+            left: '-83%',
+            top: '-50%'
+          }}
+        />
         <div className='flex flex-col lg:flex-row w-full h-auto'>
           <MyProfileImage />
           <div className='hidden lg:block w-1/3' />

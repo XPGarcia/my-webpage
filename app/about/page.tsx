@@ -1,11 +1,15 @@
-import Separator from '@/app/components/Separator';
-import TitleWithLabelInBG from '@/app/components/TitleWithLabelInBG';
-import PersonalInfo from './components/PersonalInfo';
-import SkillsGrid from './components/SkillsGrid';
-import Statistics from './components/Statistics';
-import CertificationsList from './components/CertificationsList';
-import ExperienceGrid from './components/ExperienceGrid';
+import { certifications } from '@/global/certifications';
+import { experienceList } from '@/global/experienceList';
 import { skills } from '@/global/skills';
+import {
+  CertificationsList,
+  Divider,
+  ExperienceGrid,
+  PersonalInfo,
+  SkillsGrid,
+  StatisticsGrid,
+  TitleWithLabelInBG
+} from '@/src/components';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -20,10 +24,10 @@ export default function About() {
       <div className='container mx-auto'>
         <div className='flex flex-col lg:flex-row'>
           <PersonalInfo classes='lg:w-1/2 px-4' />
-          <Statistics classes='lg:w-1/2' />
+          <StatisticsGrid classes='lg:w-1/2' />
         </div>
 
-        <Separator />
+        <Divider />
 
         <div className='flex flex-col'>
           <h3 className='text-xl md:text-2xl font-semibold text-white sm:text-center uppercase mb-10 px-4 sm:px-0'>
@@ -32,22 +36,22 @@ export default function About() {
           <SkillsGrid skills={Object.values(skills)} />
         </div>
 
-        <Separator />
+        <Divider />
 
         <div className='flex flex-col'>
           <h3 className='text-xl md:text-2xl font-semibold text-white sm:text-center uppercase mb-10 px-4 sm:px-0'>
             experience
           </h3>
-          <ExperienceGrid />
+          <ExperienceGrid experiences={experienceList} />
         </div>
 
-        <Separator />
+        <Divider />
 
         <div className='flex flex-col'>
           <h3 className='text-xl md:text-2xl font-semibold text-white sm:text-center uppercase mb-10 px-4 sm:px-0'>
             education & certifications
           </h3>
-          <CertificationsList />
+          <CertificationsList certifications={certifications} />
         </div>
       </div>
     </div>

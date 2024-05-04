@@ -1,4 +1,4 @@
-import { Experience } from '@/domain/entities/experience';
+import { Experience } from '@/src/types';
 
 export const experienceList: Experience[] = [
   {

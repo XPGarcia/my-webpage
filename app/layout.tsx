@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import Navigation from '@/app/components/Navigation';
+import { SidebarNavigation } from '@/src/components/misc';
 import { ReactNode } from 'react';
 import './globals.css';
 
@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </head>
       <body className='bg-black mb-16 lg:mb-0'>
         {children}
-        <Navigation />
+        <SidebarNavigation />
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-import { Skill } from '@/domain/entities/skill';
+import { Skill } from '@/src/types';
 
 type SkillKey =
   | 'javascript'
@@ -82,7 +82,7 @@ export const skills: Record<SkillKey, Skill> = {
   },
   godot: {
     name: 'godot',
-    percentage: 40
+    percentage: 10
   },
   docker: {
     name: 'docker',

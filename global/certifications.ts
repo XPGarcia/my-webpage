@@ -1,4 +1,6 @@
-export const certifications = [
+import { Certification } from '@/src/types';
+
+export const certifications: Certification[] = [
   {
     name: 'Computer science degree',
     company: 'ESPOL',
