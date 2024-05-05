@@ -3,10 +3,9 @@ import { skills } from '../skills';
 
 export const web1001carros: Project = {
   slug: 'web-1001carros',
-  banner: '/images/web-1001carros.jpg',
-  campaign: '/images/web-1001carros.jpg',
-  projectName: 'Web 1001carros.com',
-  path: '/portfolio/web-1001carros',
+  bannerUrl: '/images/web-1001carros.jpg',
+  campaignUrl: '/images/web-1001carros.jpg',
+  name: 'Web 1001carros.com',
   externalUrl: 'https://1001carros.com',
   client: 'Casabaca',
   description:

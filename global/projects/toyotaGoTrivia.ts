@@ -3,10 +3,9 @@ import { skills } from '../skills';
 
 export const toyotaGoTrivia: Project = {
   slug: 'toyota-go-trivia',
-  banner: '/images/toyota-go-trivia.jpg',
-  campaign: '/images/toyota-go-trivia.jpg',
-  projectName: 'Toyota GO Trivia',
-  path: '/portfolio/toyota-go-trivia',
+  bannerUrl: '/images/toyota-go-trivia.jpg',
+  campaignUrl: '/images/toyota-go-trivia.jpg',
+  name: 'Toyota GO Trivia',
   externalUrl: 'https://trivia-toyotago.blubear.io',
   client: 'Casabaca',
   description:

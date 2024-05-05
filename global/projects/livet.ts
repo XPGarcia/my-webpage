@@ -3,10 +3,9 @@ import { skills } from '../skills';
 
 export const livet: Project = {
   slug: 'livet-medical-center',
-  banner: '/images/livet-banner.jpg',
-  campaign: '/images/livet-banner.jpg',
-  projectName: 'Livet Medical Center',
-  path: '/portfolio/livet-medical-center',
+  bannerUrl: '/images/livet-banner.jpg',
+  campaignUrl: '/images/livet-banner.jpg',
+  name: 'Livet Medical Center',
   externalUrl: 'https://medcenter.xaviergarcia.dev',
   description:
     'Livet Medical Center enables efficient scheduling and management of medical appointments at a healthcare facility. With a user-friendly interface, doctors can easily record and access essential patient data, including medical history, to provide personalized care. The system is designed to streamline the administrative process and help doctors focus on delivering high-quality medical services to their patients',

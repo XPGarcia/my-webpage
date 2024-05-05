@@ -20,13 +20,12 @@ export interface Skill {
 
 export interface Project {
   slug: string;
-  banner: string;
-  campaign: string;
-  projectName: string;
-  path: string;
+  bannerUrl: string;
+  campaignUrl: string;
+  name: string;
   externalUrl?: string;
   description: string;
   bulletPoints: string[];
-  skills: Skill[];
+  skills?: Skill[];
   client?: string;
 }

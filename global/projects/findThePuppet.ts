@@ -3,10 +3,9 @@ import { skills } from '../skills';
 
 export const findThePuppet: Project = {
   slug: 'find-the-puppet',
-  banner: '/images/game-banner.jpg',
-  campaign: '/images/game-banner.jpg',
-  projectName: 'Find the Puppet',
-  path: '/portfolio/find-the-puppet',
+  bannerUrl: '/images/game-banner.jpg',
+  campaignUrl: '/images/game-banner.jpg',
+  name: 'Find the Puppet',
   externalUrl: 'https://melgabson.itch.io/find-the-puppet',
   description:
     'Find the Puppet is an engaging multiplayer online card game that challenges five players to use their social skills and deduction abilities to determine the factions of their opponents with a focus on delivering a fun and immersive gaming experience. The project features a real-time communication architecture built on websockets that facilitates seamless interactions between clients and server, ensuring smooth gameplay and quick response times',

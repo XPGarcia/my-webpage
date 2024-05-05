@@ -1,20 +1,22 @@
-import { ProjectKey, projects } from '@/global/projects';
+import { ProjectKey } from '@/global/projects';
 import type { Metadata } from 'next';
 import {
   TitleWithLabelInBG,
   ProjectDescription,
   Divider,
-  SkillsGrid,
-  RoundedButtonWithIcon
+  RoundedButtonWithIcon,
+  SkillsGrid
 } from '@/src/components';
 import Image from 'next/image';
+import { findProjectBySlug } from '@/src/api';
 
 interface Props {
   params: { slug: ProjectKey };
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const project = Object.values(projects).find((project) => project.slug === params.slug);
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const project = await findProjectBySlug(params.slug);
+
   if (!project) {
     return {
       title: 'Xavier García - Portfolio',
@@ -22,33 +24,33 @@ export function generateMetadata({ params }: Props): Metadata {
     };
   }
 
+  const skills = project.skills ?? [];
+  const skillsList = skills.map((skill) => skill.name).join(', ');
+
   return {
-    title: `Xavier García - ${project.projectName}`,
-    description: `Project ${
-      project.projectName
-    } made as a Full-Stack developer with skills: ${project.skills
-      .map((skill) => skill.name)
-      .join(', ')}.`,
+    title: `Xavier García - ${project.name}`,
+    description: `Project ${project.name} made as a Full-Stack developer with skills: ${skillsList}.`,
     openGraph: {
-      images: [project.banner]
+      images: [project.bannerUrl]
     }
   };
 }
 
-export default function PortfolioProject({ params }: Props) {
-  const project = Object.values(projects).find((project) => project.slug === params.slug);
-  if (!project) {
+export default async function PortfolioProject({ params }: Props) {
+  const project = await findProjectBySlug(params.slug);
+
+  if (!project || !project.skills) {
     return <></>;
   }
 
   return (
     <div className='flex flex-col'>
-      <TitleWithLabelInBG title={project.projectName} labelInBG='Project' />
+      <TitleWithLabelInBG title={project.name} labelInBG='Project' />
       <div className='flex flex-col container mx-auto px-4'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
           <div className='w-full'>
             <Image
-              src={project.campaign}
+              src={project.campaignUrl}
               alt='campaign'
               width={1280}
               height={720}

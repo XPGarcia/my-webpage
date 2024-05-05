@@ -3,10 +3,9 @@ import { skills } from '../skills';
 
 export const ronSanMiguel: Project = {
   slug: 'ron-san-miguel',
-  banner: '/images/ron-san-miguel-banner.jpg',
-  campaign: '/images/ron-san-miguel-banner.jpg',
-  projectName: 'Ron San Miguel',
-  path: '/portfolio/ron-san-miguel',
+  bannerUrl: '/images/ron-san-miguel-banner.jpg',
+  campaignUrl: '/images/ron-san-miguel-banner.jpg',
+  name: 'Ron San Miguel',
   externalUrl: 'https://ronsanmiguel.com/en',
   description:
     "Ron San Miguel is a local rum company known for its exceptional products. In order to showcase its premium rum selections, values, and company culture, Ron San Miguel has developed a website as a marketing tool. The project includes a fully functional and responsive website that faithfully represents the original Figma design and upholds the company's standards",

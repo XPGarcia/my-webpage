@@ -10,11 +10,16 @@ import {
 } from '@/src/components';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Xavier García - About me',
-  description:
-    'Full-Stack developer with technical web development skills and experience in the field.'
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const skills = await fetchSkills();
+
+  const skillsList = skills.map((skill) => skill.name).join(', ');
+
+  return {
+    title: 'Xavier García - About me',
+    description: `Full-Stack developer with technical web development skills: ${skillsList}.`
+  };
+}
 
 export default async function About() {
   const [experiences, certifications, skills] = await Promise.all([

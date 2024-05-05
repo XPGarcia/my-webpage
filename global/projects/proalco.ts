@@ -3,10 +3,9 @@ import { skills } from '../skills';
 
 export const proalco: Project = {
   slug: 'proalco',
-  banner: '/images/proalco-banner.jpg',
-  campaign: '/images/proalco-banner.jpg',
-  projectName: 'Proalco',
-  path: '/portfolio/proalco',
+  bannerUrl: '/images/proalco-banner.jpg',
+  campaignUrl: '/images/proalco-banner.jpg',
+  name: 'Proalco',
   externalUrl: 'https://www.proalco.com/inicio',
   description:
     'Proalco is a company that specializes in distributing high-quality food and beverages. To showcase its products, values, and work environment, Proalco has developed a website as a marketing tool. The project features a fully functional and responsive webpage that accurately reflects the original figma design and meets the client standards',

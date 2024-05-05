@@ -3,10 +3,9 @@ import { skills } from '../skills';
 
 export const prometeoShop: Project = {
   slug: 'prometeo-shop',
-  banner: '/images/prometeo-shop-banner.jpg',
-  campaign: '/images/prometeo-shop-banner.jpg',
-  projectName: 'Prometeo Shop',
-  path: '/portfolio/prometeo-shop',
+  bannerUrl: '/images/prometeo-shop-banner.jpg',
+  campaignUrl: '/images/prometeo-shop-banner.jpg',
+  name: 'Prometeo Shop',
   description:
     'The project is an e-commerce platform that uses a headless Content Management System (CMS) to manage products, enabling the e-commerce website to have a unique and customizable design. Additionally, the backend is a REST API based on microservices to provide communication between the different components. Using a microservices architecture, the project is built using Domain-Driven Design (DDD) and Hexagonal Architecture',
   bulletPoints: [
