@@ -15,7 +15,7 @@ export const fetchProjects = async (): Promise<Project[]> => {
       externalUrl: item.external_url,
       description: item.description,
       bulletPoints: item.details,
-      client: item.client ?? undefined
+      client: item.client_name ?? undefined
     };
   });
 

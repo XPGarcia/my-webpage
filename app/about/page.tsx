@@ -1,4 +1,4 @@
-import { fetchCertifications, fetchExperiences, fetchSkills } from '@/src/api';
+import { fetchCertifications, fetchExperiences, fetchProjects, fetchSkills } from '@/src/api';
 import {
   CertificationsList,
   Divider,
@@ -22,10 +22,11 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function About() {
-  const [experiences, certifications, skills] = await Promise.all([
+  const [experiences, certifications, skills, projects] = await Promise.all([
     fetchExperiences(),
     fetchCertifications(),
-    fetchSkills()
+    fetchSkills(),
+    fetchProjects()
   ]);
 
   return (
@@ -34,7 +35,12 @@ export default async function About() {
       <div className='container mx-auto'>
         <div className='flex flex-col lg:flex-row'>
           <PersonalInfo classes='lg:w-1/2 px-4' />
-          <StatisticsGrid experiences={experiences} classes='lg:w-1/2' />
+          <StatisticsGrid
+            experiences={experiences}
+            projects={projects}
+            certifications={certifications}
+            classes='lg:w-1/2'
+          />
           ()
         </div>
 
