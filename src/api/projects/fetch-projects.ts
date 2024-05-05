@@ -1,10 +1,11 @@
 import 'server-only';
 import { Project } from '@/src/types';
 import { TableIdentifiers } from '@/sst-config/config/identifiers';
-import { dynamoClient } from '../dynamo-client';
+import { DynamoClient } from '../dynamo-client';
 
 export const fetchProjects = async (): Promise<Project[]> => {
-  const dbProjects = await dynamoClient().list(TableIdentifiers.projects);
+  const dynamoClient = DynamoClient.getInstance();
+  const dbProjects = await dynamoClient.list(TableIdentifiers.projects);
 
   const projects: Project[] = dbProjects.map((item) => {
     return {

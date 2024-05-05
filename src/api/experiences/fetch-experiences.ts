@@ -1,10 +1,11 @@
 import 'server-only';
 import { Experience } from '@/src/types';
 import { TableIdentifiers } from '@/sst-config/config/identifiers';
-import { dynamoClient } from '../dynamo-client';
+import { DynamoClient } from '../dynamo-client';
 
 export const fetchExperiences = async (): Promise<Experience[]> => {
-  const dbExperiences = await dynamoClient().list(TableIdentifiers.experiences);
+  const dynamoClient = DynamoClient.getInstance();
+  const dbExperiences = await dynamoClient.list(TableIdentifiers.experiences);
 
   const experiences = dbExperiences.map((item) => {
     return {

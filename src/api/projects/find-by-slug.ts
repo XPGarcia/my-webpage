@@ -1,18 +1,18 @@
 import 'server-only';
 import { Project, Skill } from '@/src/types';
 import { TableIdentifiers } from '@/sst-config/config/identifiers';
-import { dynamoClient } from '../dynamo-client';
+import { DynamoClient } from '../dynamo-client';
 
 export const findProjectBySlug = async (slug: string): Promise<Project | undefined> => {
-  const dbClient = dynamoClient();
-  const dbProject = await dbClient.get(TableIdentifiers.projects, { slug });
+  const dynamoClient = DynamoClient.getInstance();
+  const dbProject = await dynamoClient.get(TableIdentifiers.projects, { slug });
 
   if (!dbProject) {
     return;
   }
 
   const skillsId = Array.from<number>(dbProject.skills ?? new Set());
-  const dbSkills = await dbClient.findByIds(TableIdentifiers.skills, skillsId);
+  const dbSkills = await dynamoClient.findByIds(TableIdentifiers.skills, skillsId);
 
   const skills: Skill[] = dbSkills.map((item) => {
     return {
