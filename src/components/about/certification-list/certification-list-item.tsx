@@ -23,7 +23,7 @@ export const CertificationListItem = ({ certification }: Props) => {
       </span>
       <h6 className='uppercase text-white text-lg font-semibold my-3'>
         {certification.name}
-        <span className='text-gray-400'> - {certification.company}</span>
+        <span className='text-gray-400'> - {certification.companyName}</span>
       </h6>
       <p className='text-gray-50 text-sm'>{certification.description}</p>
     </li>

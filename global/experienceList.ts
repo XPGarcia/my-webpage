@@ -1,5 +1,8 @@
 import { Experience } from '@/src/types';
 
+/**
+ * @deprecated
+ */
 export const experienceList: Experience[] = [
   {
     role: 'Full-stack developer',

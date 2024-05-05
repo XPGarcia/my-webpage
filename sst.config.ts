@@ -1,12 +1,18 @@
 import { SSTConfig } from 'sst';
 import { NextjsSite } from 'sst/constructs';
-import { createExperienceTable } from './sst-config';
+import {
+  config,
+  createCertificationsTable,
+  createExperienceTable,
+  createProjectsTable,
+  createSkillsTable
+} from './sst-config';
 
 export default {
   config(_input) {
     return {
-      name: 'my-webpage',
-      region: 'us-east-1'
+      name: config.name,
+      region: config.region
     };
   },
   stacks(app) {
@@ -19,7 +25,12 @@ export default {
                 domainAlias: `www.${process.env.DOMAIN_URL}`
               }
             : undefined,
-        bind: [createExperienceTable(stack)]
+        bind: [
+          createExperienceTable(stack),
+          createCertificationsTable(stack),
+          createSkillsTable(stack),
+          createProjectsTable(stack)
+        ]
       });
 
       stack.addOutputs({

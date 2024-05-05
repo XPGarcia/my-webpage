@@ -1,13 +1,14 @@
 import { calculateMonthsWorked, fromMonthsToYears } from '@/src/utils';
 import { StatisticsGridItem } from './statistics-grid-item';
-import { experienceList } from '@/global/experienceList';
+import { Experience } from '@/src/types';
 
 interface Props {
+  experiences: Experience[];
   classes: string;
 }
 
-export const StatisticsGrid = ({ classes }: Props) => {
-  const monthsWorked = experienceList
+export const StatisticsGrid = ({ experiences, classes }: Props) => {
+  const monthsWorked = experiences
     .map((exp) => calculateMonthsWorked(exp.dateStart, exp.dateEnd ?? new Date()))
     .reduce((acc, curr) => acc + curr, 0);
   const yearsOfExperience = fromMonthsToYears(monthsWorked);

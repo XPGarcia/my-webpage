@@ -7,11 +7,9 @@ interface Props {
 
 export const ExperienceGrid = ({ experiences }: Props) => {
   const sortedExperiences = experiences.sort((a, b) => {
-    const dateEnd = b.dateEnd ?? new Date();
-    if (a.dateEnd && dateEnd) {
-      return dateEnd.getTime() - a.dateEnd.getTime();
-    }
-    return 0;
+    const aDateEnd = a.dateEnd ?? new Date();
+    const bDateEnd = b.dateEnd ?? new Date();
+    return bDateEnd.getTime() - aDateEnd.getTime();
   });
 
   return (

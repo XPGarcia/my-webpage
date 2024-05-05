@@ -1,13 +1,13 @@
 import { Stack, Table } from 'sst/constructs';
+import { CERTIFICATIONS_TABLE_ID } from './ids';
 
 export const createExperienceTable = (stack: Stack) => {
-  return new Table(stack, 'experiences', {
+  return new Table(stack, CERTIFICATIONS_TABLE_ID, {
     fields: {
       id: 'number',
-      role: 'string',
-      company_name: 'string',
-      date_start: 'string',
-      date_end: 'string',
+      name: 'string',
+      company: 'string',
+      date: 'string',
       description: 'string'
     },
     primaryIndex: { partitionKey: 'id' }

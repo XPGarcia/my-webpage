@@ -1,6 +1,6 @@
 export interface Certification {
   name: string;
-  company: string;
+  companyName: string;
   date: Date;
   description: string;
 }

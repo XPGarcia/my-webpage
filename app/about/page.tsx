@@ -1,6 +1,4 @@
-import { certifications } from '@/global/certifications';
-import { experienceList } from '@/global/experienceList';
-import { skills } from '@/global/skills';
+import { fetchCertifications, fetchExperiences, fetchSkills } from '@/src/api';
 import {
   CertificationsList,
   Divider,
@@ -14,17 +12,25 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Xavier García - About me',
-  description: `Full-Stack developer with technical skills in: ${Object.keys(skills).join(', ')}.`
+  description:
+    'Full-Stack developer with technical web development skills and experience in the field.'
 };
 
-export default function About() {
+export default async function About() {
+  const [experiences, certifications, skills] = await Promise.all([
+    fetchExperiences(),
+    fetchCertifications(),
+    fetchSkills()
+  ]);
+
   return (
     <div className='flex flex-col'>
       <TitleWithLabelInBG title='about me' labelInBG='resume' />
       <div className='container mx-auto'>
         <div className='flex flex-col lg:flex-row'>
           <PersonalInfo classes='lg:w-1/2 px-4' />
-          <StatisticsGrid classes='lg:w-1/2' />
+          <StatisticsGrid experiences={experiences} classes='lg:w-1/2' />
+          ()
         </div>
 
         <Divider />
@@ -33,7 +39,7 @@ export default function About() {
           <h3 className='text-xl md:text-2xl font-semibold text-white sm:text-center uppercase mb-10 px-4 sm:px-0'>
             my skills
           </h3>
-          <SkillsGrid skills={Object.values(skills)} />
+          <SkillsGrid skills={skills} />
         </div>
 
         <Divider />
@@ -42,7 +48,7 @@ export default function About() {
           <h3 className='text-xl md:text-2xl font-semibold text-white sm:text-center uppercase mb-10 px-4 sm:px-0'>
             experience
           </h3>
-          <ExperienceGrid experiences={experienceList} />
+          <ExperienceGrid experiences={experiences} />
         </div>
 
         <Divider />
