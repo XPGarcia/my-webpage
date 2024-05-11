@@ -7,6 +7,9 @@ import {
   createProjectsTable,
   createSkillsTable
 } from './sst-config';
+import getConfig from 'next/config';
+
+const { serverRuntimeConfig } = getConfig();
 
 export default {
   config(_input) {
@@ -19,10 +22,10 @@ export default {
     app.stack(function Site({ stack, app }) {
       const site = new NextjsSite(stack, 'site', {
         customDomain:
-          app.stage === 'prod' && process.env.DOMAIN_URL
+          app.stage === 'prod' && serverRuntimeConfig.domainUrl
             ? {
-                domainName: process.env.DOMAIN_URL,
-                domainAlias: `www.${process.env.DOMAIN_URL}`
+                domainName: serverRuntimeConfig.domainUrl,
+                domainAlias: `www.${serverRuntimeConfig.domainUrl}`
               }
             : undefined,
         bind: [

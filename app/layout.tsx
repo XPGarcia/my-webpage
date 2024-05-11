@@ -2,6 +2,7 @@
 import { SidebarNavigation } from '@/src/components/misc';
 import { ReactNode } from 'react';
 import './globals.css';
+import { GoogleTagManager } from '@/src/components/misc/google-tag-manager';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -11,6 +12,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head>
+        <GoogleTagManager />
         <script src='https://kit.fontawesome.com/553e257edc.js' crossOrigin='anonymous' />
       </head>
       <body className='bg-black mb-16 lg:mb-0'>
