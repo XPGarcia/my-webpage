@@ -11,7 +11,7 @@ import {
 import { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const skills = await fetchSkills();
+  const skills = await fetchSkills({ onlyPrimaries: true });
 
   const skillsList = skills.map((skill) => skill.name).join(', ');
 
@@ -25,7 +25,7 @@ export default async function About() {
   const [experiences, certifications, skills, projects] = await Promise.all([
     fetchExperiences(),
     fetchCertifications(),
-    fetchSkills(),
+    fetchSkills({ onlyPrimaries: true }),
     fetchProjects()
   ]);
 

@@ -9,12 +9,12 @@ export const metadata: Metadata = {
 };
 
 export default async function Portfolio() {
-  const projects = await fetchProjects();
+  const projects = await fetchProjects({ withOrder: true });
 
   return (
     <div className='flex flex-col'>
       <TitleWithLabelInBG title='my portfolio' labelInBG='works' />
-      <div className='container xl:max-w-7xl mx-auto pb-8'>
+      <div className='container xl:max-w-7xl mx-auto pb-12'>
         <PortfolioGrid projects={projects} />
       </div>
     </div>

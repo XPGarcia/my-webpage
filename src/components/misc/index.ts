@@ -4,3 +4,4 @@ export * from './divider';
 export * from './title-with-label-in-bg';
 export * from './skills-grid';
 export * from './social-media-button';
+export * from './skeleton';

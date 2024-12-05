@@ -31,7 +31,6 @@ export default function Contact() {
               body='xavier.garcia@prometeo.dev'
               icon='fa-envelope-circle-check'
             />
-            <ContactLineOption title='call me' body='+593959795664' icon='fa-square-phone' />
             <SocialMediaIcons classes='pt-2 mb-12' />
           </div>
         </div>

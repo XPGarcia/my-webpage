@@ -4,7 +4,7 @@ export const calculateMonthsWorked = (start: Date, end: Date): number => {
   const endMonth = end.getMonth() + 1;
   const endYear = end.getFullYear();
 
-  const monthsWorked = (endYear - startYear) * 12 + endMonth - startMonth;
+  const monthsWorked = (endYear - startYear) * 12 + (endMonth - startMonth + 1);
 
   return monthsWorked;
 };

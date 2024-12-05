@@ -28,4 +28,5 @@ export interface Project {
   bulletPoints: string[];
   skills?: Skill[];
   client?: string;
+  order: number;
 }
