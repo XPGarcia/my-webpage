@@ -1,4 +1,3 @@
-import { profile } from '@/global/profile';
 import { MyProfileImage } from '../my-profile-image';
 import { PersonalInfoGridItem } from './personal-info-grid-item';
 import { RoundedButtonWithIcon } from '@/src/components/misc';
@@ -7,6 +6,15 @@ import { calculateAge } from '@/src/utils';
 interface Props {
   classes: string;
 }
+
+const profile = {
+  name: 'Xavier Garcia',
+  birthday: '1997-12-19',
+  nationality: 'Ecuadorian',
+  address: 'Ecuador',
+  email: 'xavier.garcia@prometeo.dev',
+  languages: 'Spanish, English, German'
+};
 
 export const PersonalInfo = ({ classes }: Props) => {
   const age = calculateAge(new Date(profile.birthday));

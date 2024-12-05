@@ -1,4 +1,3 @@
-import { ProjectKey } from '@/global/projects';
 import type { Metadata } from 'next';
 import {
   TitleWithLabelInBG,
@@ -11,7 +10,7 @@ import Image from 'next/image';
 import { findProjectBySlug } from '@/src/api';
 
 interface Props {
-  params: { slug: ProjectKey };
+  params: { slug: string };
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
