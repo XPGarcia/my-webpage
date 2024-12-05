@@ -18,8 +18,8 @@ export const PortfolioGridItem = ({ project }: Props) => {
 
   return (
     <>
-      {isLoading && <ImageSkeleton />}
       <Link href={path} className='group relative w-full h-60 mb-14 sm:mb-0 cursor-pointer'>
+        {isLoading && <ImageSkeleton />}
         <Image
           src={bannerUrl}
           alt={name}
