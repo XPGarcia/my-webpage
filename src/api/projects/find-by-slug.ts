@@ -29,7 +29,7 @@ export const findProjectBySlug = async (slug: string): Promise<Project | undefin
     externalUrl: dbProject.external_url,
     description: dbProject.description,
     bulletPoints: Array.from(dbProject.details),
-    client: dbProject.client ?? undefined,
+    client: dbProject.client_name ?? undefined,
     skills,
     order: dbProject.order
   };
